@@ -1,0 +1,77 @@
+#logincard{
+    width: 420px;
+    box-shadow:  0 5px 15px rgba(0, 0, 0, 0.08);
+    border-top: 6px solid aqua;
+    border-radius: 20px;
+    
+   
+    
+    
+}
+#logincontainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px;
+    
+    
+}
+#loginHeader{
+    text-align: center;
+    margin-bottom: 0;
+}
+#loginPara{
+     text-align: center;
+     margin-top: 0;
+}
+
+.loginLabel{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.loginInput{
+    padding: 10px ;
+    border-radius: 5px;
+    border-color: grey;
+    background-color: rgb(233, 233, 233);
+    margin-bottom: 10px;
+   
+    
+    
+}
+#loginPasswordCondition{
+    font-size: 15px;
+    margin-top: 0;
+}
+#checkboxContainer{
+    display: flex;
+    align-items: center;
+
+}
+#remember{
+    font-size: 15px;
+}
+#Forgotpassword{
+    margin-left: 50px;
+    text-decoration: none;
+    color: rgb(14, 184, 184);
+   
+}
+#SignInBtn{
+    padding: 10px 0px;
+    border-radius: 5px;
+    background-color: #0773ff;
+    color: white;
+    font-size: medium;
+    font-weight: 600;
+}
+#loginFooterBox{
+    display: flex;
+    align-items: center;
+     
+}
+#loginFooterLink{
+    text-decoration: none;
+    color: rgb(14, 184, 184);
+    font-weight: 500;
+}

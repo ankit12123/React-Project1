@@ -1,0 +1,27 @@
+#servicesContainer{
+   
+   margin-top: 100px;
+   margin-bottom: 50px;
+   
+}
+#servicesHeader{
+        text-align: center;
+}
+#ServicesCardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+
+}
+
+.ServicesCard{
+    border: 2px solid aqua;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 8px;
+    width: 25%;
+    
+}
+
