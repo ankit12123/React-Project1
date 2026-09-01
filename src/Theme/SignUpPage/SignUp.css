@@ -1,0 +1,174 @@
+#signupContainer{
+    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#signupCard{
+  
+    width: 450px;
+    box-shadow:  0 5px 15px rgba(0, 0, 0, 0.08);
+    border-top: 6px solid aqua;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 10px 25px 25px;
+    
+}
+#signupHeader{
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+#signupPara{
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#signupNameBox{
+    
+     display: flex;
+     gap: 16px;
+     margin-bottom: 25px;  
+
+}
+.signupField {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+.name {
+    font-size: 16px;
+    font-weight: 600;
+    
+   
+}
+.rowName{
+    
+       /* width: 100%;
+    
+    outline: none; */
+    width: 100%;
+    box-sizing: border-box;
+    height: 47px;
+    padding: 0 14px;
+    border: 1px solid #61d6d6;
+    border-radius: 14px;
+    background-color: white;
+    font-size: 13px;
+    margin-top: 7px;
+
+}
+#signupemail{
+    font-size: 16px;
+    font-weight: 600;
+}
+#signupEmailInput{
+     height: 47px;
+      width: 100%;
+    padding: 0 14px;
+    border: 1px solid #61d6d6;
+    border-radius: 14px;
+    box-sizing: border-box;
+    background-color: white;
+    font-size: 13px;
+    margin-top: 7px;
+    margin-bottom: 20px;
+}
+#signupPasswordBox{
+     display: flex;
+     flex: 1;
+     gap: 16px;
+     margin-bottom: 18px; 
+}
+
+.labelPassword{
+     font-size: 16px;
+    font-weight: 600;
+}
+.rowPassword{
+     height: 47px;
+      width: 100%;
+    padding: 0 14px;
+    box-sizing: border-box;
+    border: 1px solid #61d6d6;
+    border-radius: 14px;
+    background-color: white;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+
+#signupPasswordPara {
+    width: 210px;
+
+    font-size: 14px;
+    line-height: 18px;
+
+    margin: 0 0 15px 0;
+}
+
+
+#signupCheckboxContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+
+#checkbox {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+}
+
+
+#terms {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+#CreateAccountBtn {
+    width: 100%;
+    height: 51px;
+    border: none;
+    border-radius: 11px;
+    background-color: #55cece;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#CreateAccountBtn:hover {
+    background-color: #42c1c1;
+}
+
+#signupFooterBox {
+    display: flex;
+    align-items: center;
+  gap: 4px;
+}
+
+
+#signupFooterText {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+#signupFooterLink {
+    font-size: 14px;
+    color: #26c5c5;
+    text-decoration: none;
+    font-weight: 600;
+}
