@@ -1,6 +1,6 @@
-#csss{
+#maincontainercsss{
     width: 100%;
-   background-color: #bc9393;
+   background-color: #ebd1d1;
    display: flex;
 }
 #textContainer{
@@ -10,12 +10,12 @@
 #textHeader{
     font-size: 50px;
     margin-bottom: 0px;
-    width: 40%;
+    width: 65%;
      
 }
 #textPara{
     font-size: 22px;
-    width: 45%;
+    width: 65%;
 }
 #SignUp{
     background-color: rgb(32, 180, 180);

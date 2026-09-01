@@ -18,8 +18,9 @@
 
 #Footerbuttons{
    display: flex;
-   right:  5%;
-   position: absolute;
+    position: absolute;
+   right:  5.6%;
+  
    
 }
 .FooterBtn{

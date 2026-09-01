@@ -1,26 +1,58 @@
 
-#csss{
+#maincontainercsss{
     display: flex;
     align-items: center;
     width: 100%;
+    margin-top: 0;
 }
 #slider{
     background-color: #e88787;
-    margin-top: 20px;
-    margin-right: 200px;
     border-radius: 40px;
-    padding: 10px;
+      
+    margin: 40px auto;
+    max-width: 850px;
+    overflow: hidden;
+    width: 85%;
+       
 
+}
+#slide{
+  padding: 10px;
+}
+.preview{
+    
 }
 #back{
     padding: 10px 20px;
     border-radius: 10px;
     border-color: #5cecee;
+        /* position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 15px;
+    background: #5fe0df;
+    cursor: pointer;
+    font-size: 28px;
+    z-index: 10; */
 }
 #next{
     padding: 10px 20px;
      border-radius: 10px;
     border-color: #5cecee;
+        /* position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 15px;
+    background: #5fe0df;
+    cursor: pointer;
+    font-size: 28px;
+    z-index: 10; */
    
 }
 #dots{
