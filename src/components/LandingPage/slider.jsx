@@ -2,6 +2,7 @@ import Button from "../../Elementcomponent/Button";
 import { Heading3 } from "../../Elementcomponent/Header";
 import Card from "../../Elementcomponent/Card";
 import Paragraph from "../../Elementcomponent/Paragraph";
+import Div from "../../Elementcomponent/Div";
 
 import  '../../Theme/LandingPage/slider.css';
 
@@ -9,37 +10,37 @@ function Slider(){
     return(
     <>
     <Card id="slider">
-        <div id="slide">
+        <Div id="slide">
             <Button id="back" name="<"/>
-            <div class="preview">
+            <Div class="preview">
                 <Heading3 class="Title" text="Complete Auto Flow"/>
                 <Paragraph class="para" text="Beautiful dark/light mode with smooth
                 transitions, persisted across all pages and 
                 sessions"/>
-            </div>
-             <div class="preview">
+            </Div>
+             <Div class="preview">
                 <Heading3 class="Title" text="Complete Auto Flow"/>
                 <Paragraph class="para" text="Beautiful dark/light mode with smooth
                 transitions, persisted across all pages and 
                 sessions"/>
-            </div>
-             <div class="preview">
+            </Div>
+             <Div class="preview">
                 <Heading3 class="Title" text="Complete Auto Flow"/>
                 <Paragraph class="para" text="Beautiful dark/light mode with smooth
                 transitions, persisted across all pages and 
                 sessions"/>
-            </div>
+            </Div>
         <Button id="next" name=">"/>
 
-        <div id="dots">
+        <Div id="dots">
             <Paragraph class="dot" text="="/>
              {/* span we use make component */}
             <Paragraph class="dot" text="="/>
             <Paragraph class="dot" text="="/>
             
-        </div>
+        </Div>
 
-        </div>
+        </Div>
     </Card>
     </>
 

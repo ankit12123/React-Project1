@@ -1,13 +1,15 @@
-#servicesContainer{
-   
-   margin-top: 100px;
-   margin-bottom: 50px;
-   
+#servicesContainer {
+
+    margin-top: 100px;
+    margin-bottom: 50px;
+
 }
-#servicesHeader{
-        text-align: center;
+
+#servicesHeader {
+    text-align: center;
 }
-#ServicesCardContainer{
+
+#ServicesCardContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -16,12 +18,11 @@
 
 }
 
-.ServicesCard{
+.ServicesCard {
     border: 2px solid aqua;
     border-radius: 15px;
     padding: 30px;
     margin: 8px;
     width: 25%;
-    
-}
 
+}

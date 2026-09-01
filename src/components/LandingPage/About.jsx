@@ -2,6 +2,7 @@ import Card from "../../Elementcomponent/Card";
 import { Heading1 } from "../../Elementcomponent/Header";
 import Paragraph from "../../Elementcomponent/Paragraph";
 
+
 import  '../../Theme/LandingPage/About.css';
 
 function About(){

@@ -1,45 +1,43 @@
-
-
-
-#Footer{
-    
+#Footer {
     display: flex;
     background-color: #3509e2;
     height: 60px;
     align-items: center;
-    
 }
 
-#CopyrightFooter{
+#CopyrightFooter {
     padding: 0 5%;
     font-weight: bold;
     color: white;
 }
 
-#Footerbuttons{
-   display: flex;
+#Footerbuttons {
+    display: flex;
     position: absolute;
-   right:  5.6%;
-  
-   
+    right: 5.6%;
+
+
 }
-.FooterBtn{
+
+.FooterBtn {
     padding: 10px 20px;
     border: 2px solid rgb(197, 209, 231);
     margin-left: 12px;
     border-radius: 10px;
-    background-color:  #3509e2;
+    background-color: #3509e2;
     color: white;
 
-    
 }
-.FooterBtn:hover{
+
+.FooterBtn:hover {
     background-color: #0800ff;
-   
+
 }
-.SignUp{
+
+.SignUp {
     background-color: rgb(32, 180, 180);
 }
-.SignUp:hover{
+
+.SignUp:hover {
     background-color: rgb(22, 87, 87);
 }
