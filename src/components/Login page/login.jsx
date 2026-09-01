@@ -11,9 +11,9 @@ import   '../../Theme/login/login.css';
 function LoginCard() {
     return (
         <>
-            <Card id="logincard">
+            <Card id="logincontainer">
 
-                <Div id="logincontainer">
+                <Div id="loginCard">
                     <Heading2 id="loginHeader" text="Welcome Back" />
                     <Paragraph id="loginPara" text="Sign in to continue to your dashboard" />
 
@@ -46,10 +46,3 @@ function LoginCard() {
 export default LoginCard;
 
 
-{/* <Div id="loginNameBox">
-            <Label text="First name" for="Fname" id="Fname" class="Fname"/>
-            <Input type="text" id="Fname" class="Fname" />
-
-            <Label text="Last name" for="Lname" id="Lname" class="Lname" />
-            <Input type="text" id="Lname" class="Lname" />
-           </Div> */}
