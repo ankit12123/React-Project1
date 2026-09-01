@@ -1,13 +1,14 @@
 import Button from "../../Elementcomponent/Button";
 import { Heading2 } from "../../Elementcomponent/Header";
 import Paragraph from "../../Elementcomponent/Paragraph";
+import Div from "../../Elementcomponent/Div";
 
 import  '../../Theme/LandingPage/textSection.css';
 
 function TextSection(){
     return(
         <>
-        <div id="textContainer">
+        <Div id="textContainer">
         <Heading2 id="textHeader" text="Launch your Web Tech Practice site in minutes"/>
         <Paragraph id="textPara" text="A clean, modern starter template with Login, Signup,
         Dashboard, Profile, and Layout pages using only HTML/CSS/
@@ -16,7 +17,7 @@ function TextSection(){
 
          <Button id="SignUp" name="SignUp"/>
          <Button id="Login" name="I already have a account"/>
-        </div>
+        </Div>
         </>
     );
 }

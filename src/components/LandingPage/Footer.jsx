@@ -1,14 +1,14 @@
 import Paragraph from "../../Elementcomponent/Paragraph";
 import Button from "../../Elementcomponent/Button";
-
+import Div from "../../Elementcomponent/Div";
 import  '../../Theme/LandingPage/Footer.css';
 function Footer(){
     return(
             <>
-            <div id="Footer">
+            <Div id="Footer">
                 <Paragraph id="CopyrightFooter" text="© 2025 WebTech Practice. Built for learning and growth."/>
                 
-                <div id="Footerbuttons">
+                <Div id="Footerbuttons">
                     <Button  class="FooterBtn" name="About"/>
                     <Button class="FooterBtn" name="Services"/>
                     <Button class="FooterBtn" name="Theme"/>
@@ -16,8 +16,8 @@ function Footer(){
                     <Button class="FooterBtn SignUp"  name="Signup"/>
                     
 
-                </div>
-            </div>
+                </Div>
+            </Div>
             </>
 
     );

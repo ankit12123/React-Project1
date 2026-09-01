@@ -20,7 +20,7 @@ function Services(){
 
         </Card>
          <Card className="ServicesCard">
-            {/* in this we use h5 */}
+          
             <Heading3 className="cardTitle" text="Authentication Templates"/>
             <Paragraph className="cardpara" text="Beautiful login and signup forms with real- time
              validation, error handling, and seamless localStorage
@@ -28,7 +28,7 @@ function Services(){
 
         </Card>
          <Card className="ServicesCard">
-            {/* in this we use h5 */}
+           
             <Heading3 className="cardTitle" text="Authentication Templates"/>
             <Paragraph className="cardpara" text="Beautiful login and signup forms with real- time
              validation, error handling, and seamless localStorage
@@ -36,7 +36,7 @@ function Services(){
 
         </Card>
          <Card className="ServicesCard">
-            {/* in this we use h5 */}
+            
             <Heading3 className="cardTitle" text="Authentication Templates"/>
             <Paragraph className="cardpara" text="Beautiful login and signup forms with real- time
              validation, error handling, and seamless localStorage
@@ -44,7 +44,7 @@ function Services(){
 
         </Card>
          <Card className="ServicesCard">
-            {/* in this we use h5 */}
+            
             <Heading3 className="cardTitle" text="Authentication Templates"/>
             <Paragraph className="cardpara" text="Beautiful login and signup forms with real- time
              validation, error handling, and seamless localStorage
@@ -53,7 +53,7 @@ function Services(){
         </Card>
 
          <Card className="ServicesCard">
-            {/* in this we use h5 */}
+            
             <Heading3 className="cardTitle" text="Authentication Templates"/>
             <Paragraph className="cardpara" text="Beautiful login and signup forms with real- time
              validation, error handling, and seamless localStorage

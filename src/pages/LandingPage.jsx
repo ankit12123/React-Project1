@@ -13,7 +13,7 @@ function LandingPage(){
          
         
          <Navbar/>
-         <div id="csss">
+         <div id="maincontainercsss">
          <TextSection/>
          <Slider/>
          </div>

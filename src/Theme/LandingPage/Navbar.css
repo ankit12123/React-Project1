@@ -1,5 +1,5 @@
-#navbar{
-    
+#navbar {
+
     display: flex;
     background-color: #3509e2;
     height: 60px;
@@ -8,42 +8,47 @@
     left: 0;
     top: 0;
     right: 0;
-   position: sticky;
+    position: sticky;
 
-    
+
 
 }
-#navHeader{
-    
+
+#navHeader {
+
     color: white;
     font-weight: 400;
     padding: 5px;
 }
-#navbuttons{
-   display: flex;
-   right:  5%;
-   position: absolute;
-   
-   
+
+#navbuttons {
+    display: flex;
+    right: 5%;
+    position: absolute;
+
+
 }
-.navBtn{
+
+.navBtn {
     padding: 10px 20px;
     border: 2px solid rgb(197, 209, 231);
     margin-left: 12px;
     border-radius: 10px;
-    background-color:  #3509e2;
+    background-color: #3509e2;
     color: white;
 
-    
+
 }
-.navBtn:hover{
+
+.navBtn:hover {
     background-color: #0800ff;
 
-    
 }
-#SignUp{
+
+#SignUp {
     background-color: rgb(32, 180, 180);
 }
-#SignUp:hover{
+
+#SignUp:hover {
     background-color: rgb(22, 87, 87);
 }
