@@ -14,8 +14,8 @@ function LandingPage() {
 
             <Navbar />
             <TextSection />
-            <Outlet/>
-            {/* <About /> */}
+           
+            <About />
             <Services />
             <Footer />
 
