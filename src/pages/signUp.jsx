@@ -1,13 +1,11 @@
 import SignUp from "../components/SignUp page/SignUp";
 
-
 function SignUpPage(){
     return(
     <>
-         
-        <SignUp/>
-        
-        
+     
+         <SignUp/>
+
     </>
 
     );

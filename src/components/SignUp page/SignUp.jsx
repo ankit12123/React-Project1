@@ -7,54 +7,57 @@ import Paragraph from "../../Elementcomponent/Paragraph";
 import Button from "../../Elementcomponent/Button";
 import Link from "../../Elementcomponent/Link";
 
-import '../../Theme/SignUpPage/SignUp.css';
+import signupStyle from "../../Theme/SignUpPage/SignUp";
+
+import { useNavigate } from "react-router";
 
 function SignUp() {
+    const navigate = useNavigate();
     return (
 
         <>
-            <Card id="signupContainer">
-                <Div id="signupCard">
-                    <Heading1 id="signupHeader" text="Create your account" />
-                    <Paragraph id="signupPara" text="Sign up to access the practice dashboard." />
+            <Card style={signupStyle.signupContainer}  id="signupContainer">
+                <Div style={signupStyle.signupCard}  id="signupCard">
+                    <Heading1 style={signupStyle.signupHeader}  id="signupHeader" text="Create your account" />
+                    <Paragraph  style={signupStyle.signupPara} id="signupPara" text="Sign up to access the practice dashboard." />
 
-                    <Div id="signupNameBox">
-                        <Div class="signupField">
-                            <Label text="First name:" id="Fname" class="name" />
-                            <Input type="text" id="FnameInput" class="rowName" placeholder="Enter First Name" />
+                    <Div style={signupStyle.signupNameBox} id="signupNameBox">
+                        <Div style={signupStyle.signupField}  class="signupField">
+                            <Label  style={signupStyle.name} text="First name:" id="Fname" class="name" />
+                            <Input  style={signupStyle.rowName} type="text" id="FnameInput" class="rowName" placeholder="Enter First Name" />
                         </Div>
 
-                        <Div class="signupField">
-                            <Label text="Last name:" id="Lname" class="name" />
-                            <Input type="text" id="LnameInput" class="rowName" placeholder="Enter Last Name" />
-                        </Div>
-                    </Div>
-
-                    <Label text="Email Address:" id="signupemail" />
-                    <Input type="email" id="signupEmailInput" placeholder="Enter your email address" />
-
-                    <Div id="signupPasswordBox">
-                        <Div class="signupField">
-                            <Label text="Password:" id="password" class="labelPassword" />
-                            <Input type="text" id="passwordInput" class="rowPassword" placeholder="Enter Password" />
-                        </Div>
-                        <Div class="signupField">
-                            <Label text="Confirm Password:" id="confirmPassword" class="labelPassword" />
-                            <Input type="text" id="confirmPasswordInput" class="rowPassword" placeholder="Confirm Passowrd" />
+                        <Div style={signupStyle.signupField} class="signupField">
+                            <Label  style={signupStyle.name} text="Last name:" id="Lname" class="name" />
+                            <Input style={signupStyle.rowName} type="text" id="LnameInput" class="rowName" placeholder="Enter Last Name" />
                         </Div>
                     </Div>
 
-                    <Paragraph id="signupPasswordPara" text="Use at least 8 characters, with letter & number" />
+                    <Label style={signupStyle.signupemail}  text="Email Address:" id="signupemail" />
+                    <Input style={signupStyle.signupEmailInput} type="email" id="signupEmailInput" placeholder="Enter your email address" />
 
-                    <Div id="signupCheckboxContainer">
-                        <Input type="checkbox" id="checkbox" />
-                        <Paragraph id="terms" text="I agree to the Terms" />
+                    <Div style={signupStyle.signupPasswordBox}  id="signupPasswordBox">
+                        <Div style={signupStyle.signupField} class="signupField">
+                            <Label style={signupStyle.labelPassword} text="Password:" id="password" class="labelPassword" />
+                            <Input style={signupStyle.rowPassword} type="text" id="passwordInput" class="rowPassword" placeholder="Enter Password" />
+                        </Div>
+                        <Div style={signupStyle.signupField}  class="signupField">
+                            <Label style={signupStyle.labelPassword} text="Confirm Password:" id="confirmPassword" class="labelPassword" />
+                            <Input style={signupStyle.rowPassword} type="text" id="confirmPasswordInput" class="rowPassword" placeholder="Confirm Passowrd" />
+                        </Div>
                     </Div>
-                    <Button id="CreateAccountBtn" name="Create Account" />
 
-                    <Div id="signupFooterBox">
-                        <Paragraph id="signupFooterText" text="Already have account?" />
-                        <Link href="" id="signupFooterLink" text=" Sign in" />
+                    <Paragraph style={signupStyle.signupPasswordPara} id="signupPasswordPara" text="Use at least 8 characters, with letter & number" />
+
+                    <Div style={signupStyle.signupCheckboxContainer} id="signupCheckboxContainer">
+                        <Input style={signupStyle.checkbox}  type="checkbox" id="checkbox" />
+                        <Paragraph style={signupStyle.terms} id="terms" text="I agree to the Terms" />
+                    </Div>
+                    <Button   style={signupStyle.createAccountBtn} id="CreateAccountBtn" name="Create Account" />
+
+                    <Div  style={signupStyle.signupFooterBox}  id="signupFooterBox">
+                        <Paragraph  style={signupStyle.signupFooterText}  id="signupFooterText" text="Already have account?" />
+                        <Link href=""  style={signupStyle.signupFooterLink} id="signupFooterLink" text=" Sign in" onClick={() => navigate("/login")} />
                     </Div>
 
                 </Div>

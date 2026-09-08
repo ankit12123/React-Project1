@@ -6,37 +6,40 @@ import { Input, Label } from "../../Elementcomponent/Input";
 import Link from "../../Elementcomponent/Link";
 import Paragraph from "../../Elementcomponent/Paragraph";
 
-import   '../../Theme/login/login.css';
+import loginStyle from "../../Theme/login/login.jsx";
+
+import { useNavigate } from "react-router";
 
 function LoginCard() {
+    const navigate = useNavigate();
     return (
         <>
-            <Card id="logincontainer">
+            <Card style={loginStyle.loginContainer}  id="logincontainer">
 
-                <Div id="loginCard">
-                    <Heading2 id="loginHeader" text="Welcome Back" />
-                    <Paragraph id="loginPara" text="Sign in to continue to your dashboard" />
+                <Div style={loginStyle.loginCard}  id="loginCard">
+                    <Heading2 style={loginStyle.loginHeader}  id="loginHeader" text="Welcome Back" />
+                    <Paragraph style={loginStyle.loginPara} id="loginPara" text="Sign in to continue to your dashboard" />
 
 
-                    <Label text="Email Address:" id="loginEmail" class="loginLabel" />
-                    <Input type="email" id="loginEmail" class="loginInput"  placeholder="Enter the Email address" />
+                    <Label style={loginStyle.loginLabel}  text="Email Address:" id="loginEmail" class="loginLabel" />
+                    <Input  style={loginStyle.loginInput} type="email" id="loginEmail" class="loginInput"  placeholder="Enter the Email address" />
 
-                    <Label text="Password: " id="loginPassword" class="loginLabel" />
-                    <Input type="password" id="loginPassword" class="loginInput"  placeholder="Enter the password"/>
+                    <Label style={loginStyle.loginLabel}  text="Password: " id="loginPassword" class="loginLabel" />
+                    <Input style={loginStyle.loginInput} type="password" id="loginPassword" class="loginInput"  placeholder="Enter the password"/>
 
-                    <Paragraph id="loginPasswordCondition" text="Password must be at least 6 characters long." />
+                    <Paragraph style={loginStyle.loginPasswordCondition}  id="loginPasswordCondition" text="Password must be at least 6 characters long." />
 
-                    <Div id="checkboxContainer">
+                    <Div style={loginStyle.checkboxContainer}  id="checkboxContainer">
                         <Input type="checkbox" id="checkbox" />
-                        <Paragraph id="remember" text="Remember me for 30 days" />
-                        <Link href="" id="Forgotpassword" text="Forgot password?" />
+                        <Paragraph style={loginStyle.remember} id="remember" text="Remember me for 30 days" />
+                        <Link href="" style={loginStyle.forgotPassword} id="Forgotpassword" text="Forgot password?" />
 
                     </Div>
-                    <Button id="SignInBtn" name="Sign In" />
+                    <Button style={loginStyle.signInBtn} id="SignInBtn" name="Sign In" />
 
-                    <Div id="loginFooterBox">
+                    <Div style={loginStyle.loginFooterBox}  id="loginFooterBox">
                         <Paragraph id="loginFooterText" text="New to WebTech Practice?" />
-                        <Link href="" id="loginFooterLink" text=" Create an account" />
+                        <Link style={loginStyle.loginFooterLink}  href="" id="loginFooterLink" text=" Create an account" onClick={() => navigate("/SignUp")} />
                     </Div>
                 </Div>
             </Card>
@@ -44,5 +47,3 @@ function LoginCard() {
     );
 }
 export default LoginCard;
-
-

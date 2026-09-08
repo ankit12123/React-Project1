@@ -4,43 +4,111 @@ import Card from "../../Elementcomponent/Card";
 import Paragraph from "../../Elementcomponent/Paragraph";
 import Div from "../../Elementcomponent/Div";
 
-import  '../../Theme/LandingPage/slider.css';
+import sliderStyle from "../../Theme/LandingPage/slider.jsx";
+
+import { useState , useEffect} from "react";
+
+const sliderData = [
+    {
+        title: "Complete Auth Flow",
+        text: "Beautiful dark/light mode with smooth transitions, persisted across all pages and sessions."
+    },
+    {
+        title: "Responsive Design",
+        text: "A responsive layout that works smoothly on desktop, tablet and mobile devices."
+    },
+    {
+        title: "Reusable Components",
+        text: "Build your project using reusable React components for cleaner and easier development."
+    }
+];
 
 function Slider(){
+
+    const [index, setIndex] = useState(0);
+
+
+    function backSlide() {
+
+        setIndex(
+            (index - 1 + sliderData.length) %
+            sliderData.length
+        );
+
+    }
+
+
+    function nextSlide() {
+
+        setIndex(
+            (index + 1) %
+            sliderData.length
+        );
+
+    }
+    useEffect(() => {
+
+    const interval = setInterval(() => {
+
+        setIndex((index) =>
+            (index + 1) % sliderData.length
+        );
+
+    }, 3000 );
+
+    return () => {
+        clearInterval(interval);
+    };
+
+}, []);
+  
+
     return(
     <>
-    <Card id="slider">
-        <Div id="slide">
-            <Button id="back" name="<"/>
-            <Div class="preview">
-                <Heading3 class="Title" text="Complete Auto Flow"/>
-                <Paragraph class="para" text="Beautiful dark/light mode with smooth
-                transitions, persisted across all pages and 
-                sessions"/>
-            </Div>
-             <Div class="preview">
-                <Heading3 class="Title" text="Complete Auto Flow"/>
-                <Paragraph class="para" text="Beautiful dark/light mode with smooth
-                transitions, persisted across all pages and 
-                sessions"/>
-            </Div>
-             <Div class="preview">
-                <Heading3 class="Title" text="Complete Auto Flow"/>
-                <Paragraph class="para" text="Beautiful dark/light mode with smooth
-                transitions, persisted across all pages and 
-                sessions"/>
-            </Div>
-        <Button id="next" name=">"/>
+    <Card  style={sliderStyle.slider}  id="slider">
+        <Div   style={sliderStyle.slide}  id="slide">
+            <Button   style={sliderStyle.back} id="back" name="<" onClick={backSlide}/>
 
-        <Div id="dots">
-            <Paragraph class="dot" text="="/>
-             {/* span we use make component */}
-            <Paragraph class="dot" text="="/>
-            <Paragraph class="dot" text="="/>
-            
-        </Div>
+            <Div  style={sliderStyle.preview} id="preview">
 
-        </Div>
+                    <Heading3
+                    style={sliderStyle.sliderTitle}
+                        className="sliderTitle"
+                        text={sliderData[index].title}
+                    />
+
+                    <Paragraph
+                     style={sliderStyle.sliderPara}
+                        className="sliderPara"
+                        text={sliderData[index].text}
+                    />
+
+                </Div>
+         
+
+        <Button style={sliderStyle.next}  id="next" name=">" onClick={nextSlide}/>
+         </Div>
+                <Div style={sliderStyle.dots}  id="dots">
+
+                {sliderData.map((item, i) => (
+
+                    <span
+                        key={i}
+                         style={{
+                                ...sliderStyle.dot,
+                                ...(i === index
+                                    ? sliderStyle.activeDot
+                                    : {})
+                            }}
+                        onClick={() => setIndex(i)}
+                    />
+
+                ))}
+
+            </Div>
+
+      
+        
     </Card>
     </>
 

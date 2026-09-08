@@ -1,6 +1,6 @@
-function Div({children ,id ,className}){
+function Div({children ,id ,className ,style}){
     return(
-        <div id={id} className={className}>
+        <div id={id} className={className} style={style}>
             {children}
         </div>
     );

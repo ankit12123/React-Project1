@@ -1,24 +1,33 @@
 import {Heading1} from "../../Elementcomponent/Header";
 import Button from "../../Elementcomponent/Button";
-import  '../../Theme/LandingPage/Navbar.css'
+import navbarStyle from "../../Theme/LandingPage/Navbar";
 import Div from "../../Elementcomponent/Div";
+import { useNavigate } from "react-router";
 
 
 function Navbar(){
+    const navigate = useNavigate();
 return(
     <>
-    <Div id="navbar">
-        <Heading1 id="navHeader" text="Webtech Practice"/>
-        <Div id="navbuttons">
+    <Div style={navbarStyle.navbarContainer} id="navbarContainer">
+
+    <Div  style={navbarStyle.navbar} id="navbar">
+        <Heading1 style={navbarStyle.navHeader}  id="navHeader" text="Webtech Practice"/>
+        <Div  style={navbarStyle.navButtons} id="navbuttons">
                
-               <Button class="navBtn" name="About"/>
-               <Button class="navBtn" name="Services"/>
-               <Button class="navBtn" name="Theme"/>
-               <Button class="navBtn" name="Login"/>
-               <Button class="navBtn" id="SignUp" name="Signup"/>
+               <Button  style={navbarStyle.navBtn}  class="navBtn" name="About"  onClick={() => navigate("/about")}/>
+               <Button   style={navbarStyle.navBtn} class="navBtn" name="Services"/>
+               <Button  style={navbarStyle.navBtn}  class="navBtn" name="Theme"/>
+               <Button   style={navbarStyle.navBtn} class="navBtn" name="Login" onClick={() => navigate("/login")}/>
+               <Button style={{
+                                ...navbarStyle.navBtn,
+                                ...navbarStyle.signUp
+                            }}
+                             class="navBtn" id="SignUp" name="Signup" onClick={() => navigate("/signUp")}/>
 
         </Div>
     </Div>
+</Div>
     </>
 );
 

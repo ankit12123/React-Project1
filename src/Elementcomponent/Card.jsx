@@ -1,7 +1,7 @@
 
-  function Card({children ,id ,className}){
+  function Card({children ,id ,className,style}){
     return(
-        <div id={id} className={className}>
+        <div id={id} className={className} style={style}>
             {children}
         </div>
     );
