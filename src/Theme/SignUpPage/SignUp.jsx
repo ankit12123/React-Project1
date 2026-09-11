@@ -160,6 +160,11 @@ const signupStyle = {
         textDecoration: "none",
         fontWeight: 600,
     },
+    error:{
+         color: "red",
+          fontSize: "13px",
+           margin: "5px 0 0"
+    }
 };
 
 export default signupStyle;
