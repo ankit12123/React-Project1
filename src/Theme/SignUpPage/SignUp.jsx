@@ -74,7 +74,7 @@ const signupStyle = {
         backgroundColor: "white",
         fontSize: "13px",
         marginTop: "7px",
-        marginBottom: "20px",
+        
     },
 
     signupPasswordBox: {
@@ -82,6 +82,7 @@ const signupStyle = {
         flex: 1,
         gap: "16px",
         marginBottom: "18px",
+        marginTop: "10px",
     },
 
     labelPassword: {
