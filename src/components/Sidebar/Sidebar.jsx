@@ -99,7 +99,7 @@ function Sidebar({ activePage, setActivePage }) {
                 {/* Profile Settings */}
 
                 <Button
-                    name="Profile Settings"
+                    name="Profile Settings" 
 
                     class={
                         activePage === "profile"

@@ -50,7 +50,8 @@ const sidebarStyle = {
 
     sidebarHeading: {
         fontSize: "12px",
-        margin: "0 0 10px 0"
+        margin: "0 0 10px 0",
+        fontWeight:"bold"
     },
 
     sidebarButton: {
@@ -69,7 +70,8 @@ const sidebarStyle = {
 
     activeButton: {
         backgroundColor: "#f1f3f4",
-        border: "1px solid #55d8d8"
+        border: "1px solid #55d8d8",
+        borderLeft: "6px solid #55d8d8"
     },
 
     accountSection: {

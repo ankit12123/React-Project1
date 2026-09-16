@@ -12,12 +12,12 @@ const overviewStyle = {
     },
 
     overviewHeading: {
-        fontSize: "18px",
+        fontSize: "23px",
         marginTop: 0
     },
 
     overviewPara: {
-        fontSize: "13px",
+        fontSize: "15px",
         marginBottom: "30px"
     },
 
@@ -28,7 +28,7 @@ const overviewStyle = {
     },
 
     overviewCards: {
-        minHeight: "120px",
+        minHeight: "130px",
         padding: "18px",
         backgroundColor: "#f3f5f6",
         border: "1px solid #55d8d8",
@@ -37,12 +37,12 @@ const overviewStyle = {
     },
 
     overviewCardsHeading: {
-        fontSize: "14px",
+        fontSize: "17px",
         margin: "0 0 10px"
     },
 
     overviewCardsPara: {
-        fontSize: "11px",
+        fontSize: "13px",
         lineHeight: 1.4,
         minHeight: "35px"
     },
@@ -56,7 +56,7 @@ const overviewStyle = {
     },
 
     quickTitle: {
-        fontSize: "14px",
+        fontSize: "17px",
         marginTop: "45px"
     },
 
@@ -67,7 +67,7 @@ const overviewStyle = {
     },
 
     quickCard: {
-        minHeight: "95px",
+        minHeight: "105px",
         padding: "20px",
         border: "1px solid #55d8d8",
         borderRadius: "12px",
@@ -77,12 +77,12 @@ const overviewStyle = {
     },
 
     quickCardHeading: {
-        fontSize: "14px",
+        fontSize: "16px",
         margin: "5px 0 8px"
     },
 
     quickCardPara: {
-        fontSize: "11px",
+        fontSize: "13px",
         margin: 0
     }
 
