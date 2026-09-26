@@ -11,11 +11,18 @@ import Security from "../components/Sidebar/Security";
 import Notification from "../components/Sidebar/Notification";
 import HelpSupport from "../components/Sidebar/HelpSupport";
 
-import mainSidebarStyle from "../Theme/Sidebar/mainSidebar";
+import mainSidebarStylee from "../Theme/Sidebar/mainSidebar";
+
+import { useContext } from "react";
+import { ThemeContext } from "../Theme/theme";
 
 
 
 function Dashboard() {
+
+    const theme = useContext(ThemeContext);
+
+      const mainSidebarStyle = mainSidebarStylee(theme);
 
     const [activePage, setActivePage] = useState("overview");
 
@@ -52,21 +59,21 @@ function Dashboard() {
         <Card id="dashboard"  style={mainSidebarStyle.dashboard}>
             
 
-            {/* Fixed Sidebar */}
+            
             <Sidebar
                 activePage={activePage}
                 setActivePage={setActivePage}
             />
 
 
-            {/* Right Side */}
+            
             <Div id="dashboardMain" style={mainSidebarStyle.dashboardMain}>
 
-                {/* Fixed Top Navigation */}
+                
                 <TopNavigation />
 
 
-                {/* Only this part changes */}
+                
                 <Card id="dashboardContent" style={mainSidebarStyle.dashboardContent}>
 
                     {showContent()}

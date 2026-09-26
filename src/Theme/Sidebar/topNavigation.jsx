@@ -1,42 +1,30 @@
 
-const TopNavigationStyle =  {
-dashboardNav :  {
 
-    position: "fixed",
+const TopNavigationStylee = (theme) => ({
 
-    top: 0,
+    dashboardNav: {
+        position: "fixed",
+        top: 0,
+        right: 0,
+        left: "240px",
+        height: theme.navContainer.height,
+        backgroundColor: theme.colors.primary,
+        zIndex: 900,
+    },
 
-    right: 0,
+    dashboardNavContainer: {
+        height: "100%",
+        display: "flex",
+        alignItems: "center",
+        padding: "0 28px",
+    },
 
-    left: "240px",
+    dashboardTitle: {
+        color: theme.colors.textLight,
+        fontSize: theme.fontSize.medium,
+        margin: 0,
+    }
 
-    height: "70px",
+});
 
-    backgroundColor:" #102d72",
-
-    zIndex: 900,
-},
-
-
-dashboardNavContainer :  {
-
-    height: "100%",
-
-    display: "flex",
-
-    alignItems: "center",
-
-    padding: "0 28px"
-},
-
-
-dashboardTitle: {
-
-    color: "white",
-
-    fontSize: "15px",
-
-    margin: 0
-}
-};
-export default TopNavigationStyle;
+export default TopNavigationStylee;

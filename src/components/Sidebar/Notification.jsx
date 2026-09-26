@@ -4,10 +4,17 @@ import Paragraph from "../../Elementcomponent/Paragraph";
 import { Heading2, Heading3 } from "../../Elementcomponent/Header";
 import { Input } from "../../Elementcomponent/Input";
 
-import notificationStyle from "../../Theme/Sidebar/Notification";
+import notificationStylee from "../../Theme/Sidebar/Notification";
+import { useContext } from "react";
+import { ThemeContext } from "../../Theme/theme";
+
 
 
 function Notification() {
+
+     const theme = useContext(ThemeContext);
+
+      const notificationStyle = notificationStylee(theme);
 
     return (
 

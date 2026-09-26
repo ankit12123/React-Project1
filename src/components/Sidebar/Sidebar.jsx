@@ -4,11 +4,18 @@ import { useNavigate } from "react-router";
 import Button from "../../Elementcomponent/Button";
 import Card from "../../Elementcomponent/Card";
 
-import sidebarStyle from "../../Theme/Sidebar/Sidebar";
+import sidebarStylee from "../../Theme/Sidebar/Sidebar";
+
+import { useContext } from "react";
+import { ThemeContext } from "../../Theme/theme";
 
 function Sidebar({ activePage, setActivePage }) {
 
     const navigate = useNavigate();
+
+      const theme = useContext(ThemeContext);
+
+      const sidebarStyle = sidebarStylee(theme);
 
     function handleSignOut() {
         const confirmLogout = window.confirm(

@@ -1,49 +1,33 @@
-const mainSidebarStyle = {
-
-    
-dashboard :{
-    minHeight: "100vh",
-
-    display: "flex",
-},
-contentCard : {
-
-    maxWidth: "830px",
-
-    margin: "0 auto",
-
-    padding: "40px",
-
-    minHeight:" 300px",
-
-    backgroundColor: "white",
-
-    border: "2px solid #aee8e8",
-
-    borderRadius:" 25px",
-
-    boxShadow: "0 2px 7px rgba(0, 0, 0, 0.1)"
-},
-
-  dashboardContent: {
-
-    padding: "110px 20px 50px",
-
-    minHeight: "100vh",
-},
-dashboardMain: {
-
-    marginLeft: "240px",
-
-    width: "calc(100% - 240px)",
-
-    minHeight: "100vh",
-},
 
 
+const mainSidebarStylee = (theme) => ({
 
+    dashboard: {
+        minHeight: "100vh",
+        display: "flex",
+    },
 
+    contentCard: {
+        maxWidth: "830px",
+        margin: "0 auto",
+        padding: "40px",
+        minHeight: "300px",
+        backgroundColor: theme.colors.surface,
+        border: `2px solid ${theme.colors.border}`,
+        borderRadius: theme.borderRadius.contentCard,
+        boxShadow: theme.shadows.contentCard,
+    },
 
+    dashboardContent: {
+        padding: "110px 20px 50px",
+        minHeight: "100vh",
+    },
+
+    dashboardMain: {
+        marginLeft: "240px",
+        width: "calc(100% - 240px)",
+        minHeight: "100vh",
+    },
 
     // TABLET
     "@media (max-width: 1000px)": {
@@ -84,9 +68,10 @@ dashboardMain: {
         },
 
         dashboardTitle: {
-            fontSize: "13px",
+            fontSize: theme.fontSize.normal,
         },
     },
-};
 
-export default mainSidebarStyle;
+});
+
+export default mainSidebarStylee;

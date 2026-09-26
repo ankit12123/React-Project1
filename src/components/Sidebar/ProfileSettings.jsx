@@ -4,10 +4,17 @@ import Button from "../../Elementcomponent/Button";
 import {Heading1,Heading2, Heading3 } from "../../Elementcomponent/Header";
 import { Input, Label } from "../../Elementcomponent/Input";
 
-import profileStyle from "../../Theme/Sidebar/Profile";
+import profileStylee from "../../Theme/Sidebar/Profile";
+
+import { useContext } from "react";
+import { ThemeContext } from "../../Theme/theme";
 
 
 function ProfileSettings() {
+
+     const theme = useContext(ThemeContext);
+
+      const profileStyle = profileStylee(theme);
 
     return (
 

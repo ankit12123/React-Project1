@@ -7,10 +7,16 @@ import { Heading2, Heading3 } from "../../Elementcomponent/Header";
 
 import { Input, Label } from "../../Elementcomponent/Input";
 
-import securityStyle from "../../Theme/Sidebar/security";
+import securityStylee from "../../Theme/Sidebar/security";
+import { useContext } from "react";
+import { ThemeContext } from "../../Theme/theme";
 
 
 function Security() {
+
+     const theme = useContext(ThemeContext);
+
+  const securityStyle = securityStylee(theme);
 
     return (
 
@@ -259,6 +265,83 @@ function Security() {
             </Div>
 
         </Card>
+        //  <Card
+        //     id="securityCard"
+        //     style={styles.securityCard}
+        // >
+
+        //     <Heading2
+        //         id="securityHeading"
+        //         text="Security Settings"
+        //         style={styles.securityHeading}
+        //     />
+
+        //     <Heading3
+        //         id="securitySectionHeading"
+        //         text="Security Settings"
+        //         style={styles.sectionHeading}
+        //     />
+
+        //     <Paragraph
+        //         id="securityDescription"
+        //         text="Keep your account secure by using a strong password and changing it regularly."
+        //         style={styles.securityDescription}
+        //     />
+
+        //     <Div
+        //         id="passwordRow"
+        //         style={styles.passwordRow}
+        //     >
+
+        //         <Div
+        //             id="currentPasswordField"
+        //             style={styles.passwordField}
+        //         >
+
+        //             <Label
+        //                 id="currentPasswordLabel"
+        //                 text="Current Password"
+        //             />
+
+        //             <Input
+        //                 id="currentPassword"
+        //                 type="password"
+        //                 placeholder="Enter current password"
+        //                 style={styles.passwordInput}
+        //             />
+
+        //         </Div>
+
+
+        //         <Div
+        //             id="newPasswordField"
+        //             style={styles.passwordField}
+        //         >
+
+        //             <Label
+        //                 id="newPasswordLabel"
+        //                 text="New Password"
+        //             />
+
+        //             <Input
+        //                 id="newPassword"
+        //                 type="password"
+        //                 placeholder="Minimum 6 characters"
+        //                 style={styles.passwordInput}
+        //             />
+
+        //         </Div>
+
+        //     </Div>
+
+
+        //     <Button
+        //         id="updatePasswordButton"
+        //         name="Update Password"
+        //         style={styles.updateButton}
+        //     />
+
+        // </Card>
     );
 }
 

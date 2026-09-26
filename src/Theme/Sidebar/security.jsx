@@ -1,24 +1,26 @@
-const securityStyle = {
+const securityStylee = (theme) =>( {
 
     
     securityCard: {
-        maxWidth: "85%",
+        maxWidth: "90%",
         margin: "0 auto",
         padding: "25px 38px 35px",
 
-        backgroundColor: "#ffffff",
+        backgroundColor: "theme.colors.surface",
 
-        border: "2px solid #aee8e8",
-        borderRadius: "25px",
+        border: `2px solid ${theme.colors.border}`,
+        borderTop: `6px solid ${theme.colors.border}`,
+        borderRadius: theme.borderRadius.contentCard,
 
-        boxShadow: "0 2px 7px rgba(0, 0, 0, 0.1)",
+        boxShadow: theme.shadows.contentCard,
     },
 
 
     
+
     securityHeading: {
-        fontSize: "23px",
-        fontWeight: 600,
+        fontSize: theme.fontSize.contentHeading,
+        fontWeight:theme.fontWeight.bold,
 
         margin: "0 0 28px",
     },
@@ -26,8 +28,8 @@ const securityStyle = {
 
   
     sectionHeading: {
-        fontSize: "19px",
-        fontWeight: 600,
+        fontSize: theme.fontSize.large,
+        fontWeight: theme.fontWeight.bold,
 
         margin: "0 0 14px",
     },
@@ -35,11 +37,11 @@ const securityStyle = {
 
   
     securityDescription: {
-        fontSize: "15px",
+        fontSize: theme.fontSize.medium,
 
         margin: "0 0 25px",
 
-        color: "#222222",
+        color:theme.colors.textSecondary,
     },
 
 
@@ -48,7 +50,7 @@ const securityStyle = {
 
         width: "100%",
 
-        gap: "25px",
+        gap: theme.gap.extraLarge,
 
         marginBottom: "18px",
     },
@@ -77,28 +79,29 @@ const securityStyle = {
 
     
     passwordLabel: {
-        fontSize: "14px",
-        fontWeight: 500,
+        fontSize: theme.fontSize.medium,
+        fontWeight: theme.fontWeight.medium,
 
         marginBottom: "7px",
 
-        color: "#111111",
+        color: theme.colors.text,
     },
 
 
 
     passwordInput: {
         width: "100%",
-        height: "45px",
+        height: theme.heightInput.height,
 
         padding: "0 20px",
 
         border: "none",
-        borderRadius: "10px",
 
-        backgroundColor: "#f1f3f4",
+        borderRadius:  theme.borderRadius.medium,
 
-        fontSize: "13px",
+        backgroundColor:theme.colors.inputColor,
+
+        fontSize: theme.fontSize.normal,
 
         outline: "none",
 
@@ -112,7 +115,7 @@ const securityStyle = {
 
         justifyContent: "flex-end",
 
-        gap: "10px",
+        gap: theme.gap.medium,
 
         marginTop: "18px",
 
@@ -125,15 +128,15 @@ const securityStyle = {
         width: "80px",
         height: "40px",
 
-        border: "1px solid #55d8d8",
+        border: `1px solid ${theme.colors.borderPrimary}`,
 
-        borderRadius: "10px",
+        borderRadius: theme.borderRadius.medium,
 
-        backgroundColor: "#ffffff",
+        backgroundColor: theme.colors.surface,
 
-        fontSize: "14px",
+        fontSize: theme.fontSize.medium,
 
-        fontWeight: 600,
+        fontWeight: theme.fontWeight.bold,
 
         cursor: "pointer",
     },
@@ -141,20 +144,23 @@ const securityStyle = {
 
    
     updateButton: {
+
         width: "150px",
         height: "40px",
 
         border: "none",
 
-        borderRadius: "10px",
+        borderRadius: theme.borderRadius.medium,
 
-        backgroundColor: "#4bc9c9",
+        border: `1px solid ${theme.colors.borderPrimary}`,
 
-        color: "#ffffff",
+        backgroundColor:  theme.colors.secondary,
 
-        fontSize: "14px",
+        color:  theme.colors.surface,
 
-        fontWeight: 600,
+        fontSize: theme.fontSize.medium,
+
+        fontWeight: theme.fontWeight.bold,
 
         cursor: "pointer",
     },
@@ -166,7 +172,7 @@ const securityStyle = {
 
         height: "1px",
 
-        backgroundColor: "#bdebed",
+        backgroundColor: theme.colors.divider,
 
         margin: "20px 0",
     },
@@ -174,9 +180,9 @@ const securityStyle = {
 
     
     informationHeading: {
-        fontSize: "16px",
+        fontSize: theme.fontSize.semiLarge,
 
-        fontWeight: 600,
+        fontWeight:  theme.fontWeight.bold,
 
         margin: "0 0 25px",
     },
@@ -188,7 +194,7 @@ const securityStyle = {
 
         width: "100%",
 
-        gap: "13px",
+        gap:  theme.gap.semiLarge,
     },
 
 
@@ -200,11 +206,11 @@ const securityStyle = {
 
         padding: "15px 20px",
 
-        backgroundColor: "#f1f3f4",
+        backgroundColor: theme.colors.background,
 
-        border: "1px solid #55d8d8",
+        border: `1px solid ${theme.colors.borderPrimary}`,
 
-        borderRadius: "10px",
+        borderRadius: theme.borderRadius.medium,
 
         boxSizing: "border-box",
     },
@@ -212,18 +218,18 @@ const securityStyle = {
 
    
     informationIcon: {
-        fontSize: "20px",
+        fontSize: theme.fontSize.Large,
 
-        color: "#4bc9c9",
+        color: theme.colors.borderPrimary,
 
         marginBottom: "12px",
     },
 
 
     informationTitle: {
-        fontSize: "14px",
+        fontSize: theme.fontSize.medium,
 
-        fontWeight: 600,
+        fontWeight:  theme.fontWeight.bold,
 
         margin: "0 0 10px",
     },
@@ -231,13 +237,18 @@ const securityStyle = {
 
 
     informationText: {
-        fontSize: "11px",
+        fontSize:theme.fontSize.small,
 
         margin: "0",
 
-        color: "#222222",
+        color: theme.colors.textSecondary,
     },
 
-};
+});
 
-export default securityStyle;
+export default securityStylee;
+
+
+
+
+

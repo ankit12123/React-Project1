@@ -4,10 +4,16 @@ import Paragraph from "../../Elementcomponent/Paragraph";
 
 import { Heading2, Heading3 } from "../../Elementcomponent/Header";
 
-import helpSupportStyle from "../../Theme/Sidebar/helpSupport";
+import helpSupportStylee from "../../Theme/Sidebar/helpSupport";
+
+import { useContext } from "react";
+import { ThemeContext } from "../../Theme/theme";
 
 
 function HelpSupport() {
+     const theme = useContext(ThemeContext);
+
+      const helpSupportStyle = helpSupportStylee(theme);
 
     return (
 

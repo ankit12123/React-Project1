@@ -1,6 +1,7 @@
 import * as Yup from "yup";
 
-const signupValidation = Yup.object({
+const SignUpValidation = Yup.object({
+
     firstName: Yup.string()
         .trim()
         .min(2, "First name must be at least 2 characters.")
@@ -17,37 +18,25 @@ const signupValidation = Yup.object({
         .required("Email is required."),
 
     password: Yup.string()
-        .min(6, "Password must be at least 6 characters.")
+        .required("Password is required.")
         .matches(
-            /[a-z]/,
-            "Password must contain at least one lowercase letter."
-        )
-        .matches(
-            /[A-Z]/,
-            "Password must contain at least one uppercase letter."
-        )
-        .matches(
-            /[0-9]/,
-            "Password must contain at least one number."
-        )
-        .matches(
-            /[@$!%*?&#]/,
-            "Password must contain at least one special character."
-        )
-        .required("Password is required."),
+            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#]).{8,}$/,
+            "Password must be at least 8 characters with uppercase, lowercase, number & special character."
+        ),
 
     confirmPassword: Yup.string()
+        .required("Confirm password is required.")
         .oneOf(
             [Yup.ref("password")],
             "Passwords do not match."
-        )
-        .required("Confirm password is required."),
+        ),
 
     terms: Yup.boolean()
         .oneOf(
             [true],
-            "You must agree to the Terms."
+            "Please agree to the Terms."
         )
+
 });
 
-export default signupValidation;
+export default SignUpValidation;

@@ -2,9 +2,17 @@ import Card from "../../Elementcomponent/Card";
 import Div from "../../Elementcomponent/Div";
 import { Heading3 } from "../../Elementcomponent/Header";
 
-import TopNavigationStyle from "../../Theme/Sidebar/topNavigation";
+import TopNavigationStylee from "../../Theme/Sidebar/topNavigation";
+
+import { useContext } from "react";
+import { ThemeContext } from "../../Theme/theme";
+
 
 function TopNavigation() {
+
+     const theme = useContext(ThemeContext);
+
+      const TopNavigationStyle = TopNavigationStylee(theme);
 
     return (
         <Card id="dashboardNav" style={TopNavigationStyle.dashboardNav}>

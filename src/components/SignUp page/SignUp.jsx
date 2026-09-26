@@ -7,12 +7,23 @@ import Paragraph from "../../Elementcomponent/Paragraph";
 import Button from "../../Elementcomponent/Button";
 import Link from "../../Elementcomponent/Link";
 
-import signupStyle from "../../Theme/SignUpPage/SignUp";
+import signupStylee from "../../Theme/SignUpPage/SignUp";
 
 import { useNavigate } from "react-router";
 import { useState } from "react";
 
+import { useContext } from "react";
+import { ThemeContext } from "../../Theme/theme";
+
+
+
 function SignUp() {
+
+    
+     const theme = useContext(ThemeContext);
+
+  const signupStyle = signupStylee(theme);
+
     const navigate = useNavigate();
 
     const [firstName, setFirstName] = useState("");

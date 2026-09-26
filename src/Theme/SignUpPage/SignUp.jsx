@@ -1,171 +1,274 @@
 
-const signupStyle = {
+
+const signupStylee = (theme) => ({
+
     signupContainer: {
         height: "100vh",
+
         display: "flex",
+
         justifyContent: "center",
+
         alignItems: "center",
     },
+
 
     signupCard: {
         width: "450px",
-        boxShadow: "0 5px 15px rgba(0, 0, 0, 0.08)",
-        borderTop: "6px solid aqua",
-        borderRadius: "20px",
+
+        boxShadow: theme.shadows.card,
+
+
+
+        borderRadius: theme.borderRadius.extraLarge,
+
         display: "flex",
+
         flexDirection: "column",
-        backgroundColor: "#fff",
+
+        backgroundColor: theme.colors.cardBackground,
+
         padding: "10px 25px 25px",
     },
 
+
     signupHeader: {
-        fontSize: "32px",
-        fontWeight: 600,
+        fontSize: theme.fontSize.mainHeading,
+
+        fontWeight: theme.fontWeight.bold,
+
         marginBottom: 0,
     },
 
+
     signupPara: {
-        fontSize: "16px",
+        fontSize: theme.fontSize.medium,
+
         marginTop: 0,
+
         marginBottom: "10px",
     },
 
+
     signupNameBox: {
         display: "flex",
-        gap: "16px",
-        marginBottom: "25px",
-    },
 
-    signupField: {
-        flex: 1,
-        display: "flex",
-        flexDirection: "column",
-    },
+        gap: theme.gap.semiLarge,
 
-    name: {
-        fontSize: "16px",
-        fontWeight: 600,
-    },
-
-    rowName: {
-        width: "100%",
-        boxSizing: "border-box",
-        height: "47px",
-        padding: "0 14px",
-        border: "1px solid #61d6d6",
-        borderRadius: "14px",
-        backgroundColor: "white",
-        fontSize: "13px",
-        marginTop: "7px",
-    },
-
-    signupemail: {
-        fontSize: "16px",
-        fontWeight: 600,
-    },
-
-    signupEmailInput: {
-        height: "47px",
-        width: "100%",
-        padding: "0 14px",
-        border: "1px solid #61d6d6",
-        borderRadius: "14px",
-        boxSizing: "border-box",
-        backgroundColor: "white",
-        fontSize: "13px",
-        marginTop: "7px",
-        
-    },
-
-    signupPasswordBox: {
-        display: "flex",
-        flex: 1,
-        gap: "16px",
-        marginBottom: "18px",
-        marginTop: "10px",
-    },
-
-    labelPassword: {
-        fontSize: "16px",
-        fontWeight: 600,
-    },
-
-    rowPassword: {
-        height: "47px",
-        width: "100%",
-        padding: "0 14px",
-        boxSizing: "border-box",
-        border: "1px solid #61d6d6",
-        borderRadius: "14px",
-        backgroundColor: "white",
-        fontSize: "13px",
-        marginTop: "7px",
-    },
-
-    signupPasswordPara: {
-        width: "210px",
-        fontSize: "14px",
-        lineHeight: "18px",
-        margin: "0 0 15px 0",
-    },
-
-    signupCheckboxContainer: {
-        display: "flex",
-        alignItems: "center",
-        gap: "8px",
-        marginBottom: "25px",
-    },
-
-    checkbox: {
-        width: "14px",
-        height: "14px",
-        margin: 0,
-    },
-
-    terms: {
-        margin: 0,
-        fontSize: "14px",
-    },
-
-    createAccountBtn: {
-        width: "100%",
-        height: "51px",
-        border: "none",
-        borderRadius: "11px",
-        backgroundColor: "#55cece",
-        color: "white",
-        fontSize: "16px",
-        fontWeight: 700,
-        cursor: "pointer",
         marginBottom: "20px",
     },
 
-    createAccountBtnHover: {
-        backgroundColor: "#42c1c1",
+
+    signupField: {
+        flex: 1,
+
+        display: "flex",
+
+        flexDirection: "column",
     },
+
+
+    name: {
+        fontSize: theme.fontSize.medium,
+
+        fontWeight: theme.fontWeight.bold,
+    },
+
+
+    rowName: {
+        width: "100%",
+
+        boxSizing: "border-box",
+
+        height: theme.heightInput.height,
+
+        padding: "0 14px",
+
+        border: `1px solid ${theme.colors.borderPrimary}`,
+
+        borderRadius: theme.borderRadius.large,
+
+        backgroundColor:theme.colors.inputColor,
+
+        fontSize: theme.fontSize.normal,
+
+        marginTop: "7px",
+    },
+
+
+    signupemail: {
+        fontSize: theme.fontSize.medium,
+
+        fontWeight: theme.fontWeight.bold,
+
+    },
+
+
+    signupEmailInput: {
+        height: theme.heightInput.height,
+
+        width: "100%",
+
+        padding: "0 14px",
+
+        border: `1px solid ${theme.colors.borderPrimary}`,
+
+        borderRadius: theme.borderRadius.medium,
+
+        boxSizing: "border-box",
+
+        backgroundColor:theme.colors.inputColor,
+
+        fontSize: theme.borderRadius.large,
+
+        marginTop: "7px",
+
+    },
+
+
+    signupPasswordBox: {
+        display: "flex",
+
+        flex: 1,
+
+        gap: theme.gap.semiLarge,
+
+        marginBottom: "18px",
+
+        marginTop: "20px",
+    },
+
+
+    labelPassword: {
+        fontSize: theme.fontSize.medium,
+
+        fontWeight: theme.fontWeight.bold,
+    },
+
+
+    rowPassword: {
+        height: theme.heightInput.height,
+
+        width: "100%",
+
+        padding: "0 14px",
+
+        boxSizing: "border-box",
+
+        border: `1px solid ${theme.colors.borderPrimary}`,
+
+        borderRadius: theme.borderRadius.large,
+
+        backgroundColor:theme.colors.inputColor,
+
+        fontSize: theme.fontSize.normal,
+
+        marginTop: "7px",
+    },
+
+
+    signupPasswordPara: {
+        width: "210px",
+
+        fontSize: theme.fontSize.medium,
+
+        lineHeight: "18px",
+
+        margin: "0 0 15px 0",
+    },
+
+
+    signupCheckboxContainer: {
+        display: "flex",
+
+        alignItems: "center",
+
+        gap: theme.gap.medium,
+
+        marginBottom: "25px",
+    },
+
+
+    checkbox: {
+        width: "14px",
+
+        height: "14px",
+
+        margin: 0,
+    },
+
+
+    terms: {
+        margin: 0,
+
+        fontSize: theme.fontSize.medium,
+    },
+
+
+    createAccountBtn: {
+        width: "100%",
+
+        height: theme.heightBtn.large,
+
+        border: "none",
+
+        borderRadius: theme.borderRadius.medium,
+
+        backgroundColor: theme.colors.secondary,
+
+        color: theme.colors.textLight,
+
+        fontSize: theme.fontSize.semiLarge,
+
+        fontWeight: theme.fontWeight.bold,
+
+        cursor: "pointer",
+
+        marginBottom: "20px",
+    },
+
+
+    createAccountBtnHover: {
+        backgroundColor: theme.colors.success,
+    },
+
 
     signupFooterBox: {
         display: "flex",
+
         alignItems: "center",
-        gap: "4px",
+
+        gap: theme.gap.small,
     },
+
 
     signupFooterText: {
         margin: 0,
-        fontSize: "14px",
+
+        fontSize: theme.fontSize.medium,
     },
+
 
     signupFooterLink: {
-        fontSize: "14px",
-        color: "#26c5c5",
-        textDecoration: "none",
-        fontWeight: 600,
-    },
-    error:{
-         color: "red",
-          fontSize: "13px",
-           margin: "5px 0 0"
-    }
-};
+        fontSize: theme.fontSize.normal,
 
-export default signupStyle;
+        color: theme.colors.secondary,
+
+        textDecoration: "none",
+
+        fontWeight: theme.fontWeight.bold,
+    },
+
+
+    error: {
+        color: theme.colors.danger,
+
+        fontSize: theme.fontSize.normal,
+
+        margin: "5px 0 0",
+    },
+
+});
+
+
+export default signupStylee;

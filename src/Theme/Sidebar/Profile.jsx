@@ -1,49 +1,41 @@
-const profileStyle = {
 
-   
+
+const profileStylee = (theme) => ({
+
     profileCard: {
-        maxWidth: "85%",
+        maxWidth: "90%",
         margin: "0 auto",
         padding: "18px 35px 24px",
-        backgroundColor: "#ffffff",
-        border: "2px solid #aee8e8",
-        borderRadius: "25px",
-        boxShadow: "0 2px 7px rgba(0, 0, 0, 0.1)",
+        backgroundColor: theme.colors.surface,
+        border: `2px solid ${theme.colors.border}`,
+        borderTop: `6px solid ${theme.colors.border}`,
+        borderRadius: theme.borderRadius.contentCard,
+        boxShadow: theme.shadows.contentCard,
     },
 
-
-    
     profileHeading: {
-        fontSize: "23px",
-        fontWeight: "600",
+        fontSize: theme.fontSize.contentHeading,
+        fontWeight: theme.fontWeight.bold,
         margin: "0 0 18px",
     },
 
-
-    
     sectionHeading: {
-        fontSize: "20px",
-        fontWeight: "600",
+        fontSize:  theme.fontSize.large,
+        fontWeight: theme.fontWeight.bold,
         margin: "0 0 14px",
     },
 
-
-    
     personalInformation: {
-        marginBottom: "25px",
+        marginBottom: theme.gap.extraLarge,
     },
 
-
-    
     profileRow: {
         display: "flex",
         width: "100%",
-        gap: "25px",
+        gap: theme.gap.extraLarge,
         marginBottom: "18px",
     },
 
-
-    
     profileField: {
         width: "calc(50% - 12.5px)",
         display: "flex",
@@ -51,38 +43,29 @@ const profileStyle = {
         minWidth: "0",
     },
 
-
-   
     profileLabel: {
-        fontSize: "15px",
-        fontWeight: 600,
+        fontSize: theme.fontSize.medium,
+        fontWeight: theme.fontWeight.bold,
         marginBottom: "6px",
-        color: "#111111",
+        color: theme.colors.text,
     },
 
-
-   
     profileInput: {
         width: "100%",
-        height: "45px",
+        height: theme.heightInput.height,
         padding: "0 20px",
         border: "none",
-        borderRadius: "10px",
-        backgroundColor: "#f1f3f4",
-        fontSize: "12px",
+        borderRadius: theme.borderRadius.medium,
+        backgroundColor:theme.colors.inputColor,
+        fontSize: theme.fontSize.normal,
         outline: "none",
         boxSizing: "border-box",
     },
 
-
-   
     addressInformation: {
         marginTop: "10px",
-       
     },
 
-
-    
     addressField: {
         width: "100%",
         display: "flex",
@@ -90,57 +73,52 @@ const profileStyle = {
         marginBottom: "18px",
     },
 
-
     addressTextarea: {
         width: "100%",
         height: "80px",
         padding: "14px 20px",
         border: "none",
-        borderRadius: "10px",
-        backgroundColor: "#f1f3f4",
-        fontSize: "12px",
-        // fontFamily:"Arial-serif",
+        borderRadius: theme.borderRadius.medium,
+        backgroundColor:theme.colors.inputColor,
+        fontSize: theme.fontSize.normal,
+        
         resize: "none",
         outline: "none",
         boxSizing: "border-box",
     },
 
-
-    
     buttonContainer: {
         display: "flex",
         justifyContent: "flex-end",
         gap: "8px",
-        marginTop: "25px",
+        marginTop: theme.gap.extraLarge,
     },
 
-
-   
     cancelButton: {
         width: "140px",
         height: "40px",
-        border: "1px solid #55d8d8",
-        borderRadius: "10px",
-        backgroundColor: "#ffffff",
-        fontSize: "14px",
-        fontWeight: "600",
+        border: `1px solid ${theme.colors.borderPrimary}`,
+        borderRadius: theme.borderRadius.medium,
+        backgroundColor: theme.colors.surface,
+        fontSize: theme.fontSize.normal,
+        fontWeight: theme.fontWeight.bold,
         cursor: "pointer",
     },
 
-
-    
     saveButton: {
         width: "140px",
         height: "40px",
         border: "none",
-        borderRadius: "10px",
-        backgroundColor: "#4bc9c9",
-        color: "#ffffff",
-        fontSize: "14px",
-        fontWeight: "600",
+        borderRadius: theme.borderRadius.medium,
+        border: `1px solid ${theme.colors.borderPrimary}`,
+        backgroundColor: theme.colors.secondary,
+        color: theme.colors.textLight,
+        
+        fontSize: theme.fontSize.normal,
+        fontWeight: theme.fontWeight.bold,
         cursor: "pointer",
     },
 
-};
+});
 
-export default profileStyle;
+export default profileStylee;
