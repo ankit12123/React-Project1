@@ -1,11 +1,14 @@
-const textSectionStyle = {
+
+
+const textSectionStylee = (theme) => ({
+
     mainTextContainer: {
         minHeight: "600px",
         padding: "110px 5% 60px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        gap: "50px",
+        gap: theme.gap.maxLarge,
         boxSizing: "border-box",
     },
 
@@ -14,13 +17,13 @@ const textSectionStyle = {
     },
 
     textHeader: {
-        fontSize: "52px",
+        fontSize: theme.fontSize.textSectionHeading,
         lineHeight: 1.15,
         margin: "0 0 25px",
     },
 
     textPara: {
-        fontSize: "19px",
+        fontSize: theme.fontSize.large,
         lineHeight: 1.5,
         maxWidth: "600px",
         marginBottom: "25px",
@@ -28,25 +31,27 @@ const textSectionStyle = {
 
     textButtons: {
         display: "flex",
-        gap: "10px",
+        gap: theme.gap.medium,
     },
 
     textSignUp: {
-        backgroundColor: "#20b4b4",
-        color: "white",
-        border: "2px solid #c5d1e7",
+        backgroundColor: theme.colors.secondary,
+        color: theme.colors.textLight,
+        border: `2px solid ${theme.colors.borderPrimary}`,
         padding: "10px 20px",
-        borderRadius: "10px",
+        borderRadius: theme.borderRadius.medium,
         cursor: "pointer",
+        fontWeight : theme.fontWeight.extraBold,
     },
 
     textLogin: {
-        backgroundColor: "white",
-        border: "2px solid #20b4b4",
+        backgroundColor: theme.colors.surface,
+        border: `2px solid ${theme.colors.borderPrimary}`,
         padding: "10px 25px",
-        borderRadius: "10px",
+        borderRadius: theme.borderRadius.medium,
         cursor: "pointer",
     },
-};
 
-export default textSectionStyle;
+});
+
+export default textSectionStylee;

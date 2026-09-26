@@ -1,14 +1,16 @@
-const navbarStyle = {
+
+
+const navbarStylee = (theme) => ({
 
     navbarContainer: {
         position: "fixed",
         top: 0,
         left: 0,
         right: 0,
-        height: "70px",
-        backgroundColor: "#102d72",
+        height: theme.navContainer.height,
+        backgroundColor: theme.colors.primary,
         zIndex: 1000,
-        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.15)",
+        
     },
 
     navbar: {
@@ -21,8 +23,8 @@ const navbarStyle = {
     },
 
     navHeader: {
-        color: "white",
-        fontWeight: 400,
+        color: theme.colors.textLight,
+        fontWeight: theme.fontWeight.light,
         padding: "5px",
         margin: 0,
     },
@@ -30,22 +32,23 @@ const navbarStyle = {
     navButtons: {
         display: "flex",
         alignItems: "center",
-        gap: "10px",
+        gap: theme.gap.medium,
     },
 
     navBtn: {
         padding: "9px 18px",
-        borderRadius: "8px",
-        border: "1px solid #43d8da",
+        borderRadius: theme.borderRadius.small,
+        border: `1px solid ${theme.colors.borderPrimary}`,
         backgroundColor: "transparent",
-        color: "white",
+        color: theme.colors.textLight,
         cursor: "pointer",
     },
 
     signUp: {
-        backgroundColor: "#43c9c9",
+        backgroundColor: theme.colors.secondary,
+        fontWeight : theme.fontWeight.extraBold,
     }
 
-};
+});
 
-export default navbarStyle;
+export default navbarStylee;

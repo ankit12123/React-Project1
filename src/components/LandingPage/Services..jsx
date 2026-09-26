@@ -2,9 +2,19 @@ import Card from "../../Elementcomponent/Card";
 import { Heading1, Heading3 } from "../../Elementcomponent/Header";
 import Paragraph from "../../Elementcomponent/Paragraph";
 
-import servicesStyle from "../../Theme/LandingPage/Services";
+import servicesStylee from "../../Theme/LandingPage/Services";
+
+import { useContext } from "react";
+import { ThemeContext } from "../../Theme/theme";
+
+
 
 function Services() {
+
+ const theme = useContext(ThemeContext);
+
+    const servicesStyle = servicesStylee(theme);
+
     return (
         <>
             <Card style={servicesStyle.servicesContainer} id="servicesContainer">

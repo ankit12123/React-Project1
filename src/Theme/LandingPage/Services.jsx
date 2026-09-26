@@ -1,7 +1,9 @@
-const servicesStyle = {
+
+
+const servicesStylee = (theme) => ({
 
     servicesContainer: {
-        marginTop: "100px",
+        marginTop: "120px",
         marginBottom: "50px",
     },
 
@@ -18,13 +20,17 @@ const servicesStyle = {
     },
 
     servicesCard: {
-        border: "2px solid aqua",
-        borderRadius: "15px",
+        border: `2px solid ${theme.colors.borderPrimary}`,
+        borderRadius: theme.borderRadius.large,
         padding: "30px",
         margin: "8px",
         width: "25%",
+
+        "&:hover" : {
+           backgroundColor : "#e74c3c",
+        }
     }
 
-};
+});
 
-export default servicesStyle;
+export default servicesStylee;
