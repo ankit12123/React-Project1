@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import Sidebar from "../components/Sidebar/Sidebar";
 import TopNavigation from "../components/Sidebar/TopNavigation";
+import Card from "../Elementcomponent/Card";
+import Div from "../Elementcomponent/Div";
 
 import Overview from "../components/Sidebar/Overview";
 import ProfileSettings from "../components/Sidebar/ProfileSettings";
@@ -9,11 +11,18 @@ import Security from "../components/Sidebar/Security";
 import Notification from "../components/Sidebar/Notification";
 import HelpSupport from "../components/Sidebar/HelpSupport";
 
-import "../Theme/Sidebar/sidebar.css";
-import LandingPage from "./LandingPage";
+import mainSidebarStylee from "../Theme/Sidebar/mainSidebar";
+
+import { useContext } from "react";
+import { ThemeContext } from "../Theme/theme";
+
 
 
 function Dashboard() {
+
+    const theme = useContext(ThemeContext);
+
+      const mainSidebarStyle = mainSidebarStylee(theme);
 
     const [activePage, setActivePage] = useState("overview");
 
@@ -47,32 +56,33 @@ function Dashboard() {
 
     return (
 
-        <div id="dashboard">
+        <Card id="dashboard"  style={mainSidebarStyle.dashboard}>
+            
 
-            {/* Fixed Sidebar */}
+            
             <Sidebar
                 activePage={activePage}
                 setActivePage={setActivePage}
             />
 
 
-            {/* Right Side */}
-            <main id="dashboardMain">
+            
+            <Div id="dashboardMain" style={mainSidebarStyle.dashboardMain}>
 
-                {/* Fixed Top Navigation */}
+                
                 <TopNavigation />
 
 
-                {/* Only this part changes */}
-                <section id="dashboardContent">
+                
+                <Card id="dashboardContent" style={mainSidebarStyle.dashboardContent}>
 
                     {showContent()}
 
-                </section>
+                </Card>
 
-            </main>
+            </Div>
 
-        </div>
+        </Card>
     );
 }
 

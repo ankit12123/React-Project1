@@ -1,10 +1,20 @@
 import Paragraph from "../../Elementcomponent/Paragraph";
 import Button from "../../Elementcomponent/Button";
 import Div from "../../Elementcomponent/Div";
-import footerStyle from "../../Theme/LandingPage/Footer";
+import footerStylee from "../../Theme/LandingPage/Footer";
 import { useNavigate } from "react-router";
+
+
+import { useContext } from "react";
+import { ThemeContext } from "../../Theme/theme";
+
 function Footer() {
     const navigate = useNavigate();
+
+    const theme = useContext(ThemeContext);
+
+    const footerStyle = footerStylee(theme);
+
     return (
         <>
             <Div style={footerStyle.footerContainer} id="footerContainer">

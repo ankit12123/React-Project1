@@ -6,12 +6,19 @@ import { Input, Label } from "../../Elementcomponent/Input";
 import Link from "../../Elementcomponent/Link";
 import Paragraph from "../../Elementcomponent/Paragraph";
 
-import loginStyle from "../../Theme/login/login.jsx";
+import loginStylee from "../../Theme/login/login.jsx";
 import { useState } from "react";
 
 import { useNavigate } from "react-router";
 
+import { useContext } from "react";
+import { ThemeContext } from "../../Theme/theme";
+
 function LoginCard() {
+
+     const theme = useContext(ThemeContext);
+
+  const loginStyle = loginStylee(theme);
 
     const navigate = useNavigate();
 
@@ -64,7 +71,7 @@ function LoginCard() {
 
         alert("Login successful!");
 
-        navigate("/SignUp");
+        navigate("/dashboard");
     }
     return (
         <>
@@ -92,10 +99,10 @@ function LoginCard() {
                         <Link href="" style={loginStyle.forgotPassword} id="Forgotpassword" text="Forgot password?" />
 
                     </Div>
-                    <Button style={loginStyle.signInBtn} id="SignInBtn" name="Sign In" disabled={!rememberMe}  onClick={handleLogin} />
+                    <Button style={loginStyle.signInBtn} id="SignInBtn" name="Sign In" disabled={!rememberMe}  onClick={handleLogin}  />
 
                     <Div style={loginStyle.loginFooterBox} id="loginFooterBox">
-                        <Paragraph id="loginFooterText" text="New to WebTech Practice?" />
+                        <Paragraph id="loginFooterText" style={loginStyle.loginFooterText} text="New to WebTech Practice?" />
                         <Link style={loginStyle.loginFooterLink} href="" id="loginFooterLink" text=" Create an account" onClick={() => navigate("/SignUp")} />
                     </Div>
                 </Div>

@@ -41,6 +41,10 @@ import {createBrowserRouter, RouterProvider} from "react-router";
 import LoginCard from "./components/Login page/login";
 import SignUpPage from "./pages/signUp";
 import About from "./components/LandingPage/About";
+import Dashboard from "./pages/Sidebar";
+import ThemeProvider from "./Theme/theme";
+
+
 
 
 const router = createBrowserRouter([
@@ -64,6 +68,11 @@ const router = createBrowserRouter([
         path: "/signUp",
         element: <SignUpPage />
     },
+    
+    {
+        path: "/dashboard",
+        element : <Dashboard/>
+    },
     {
         path:"/./about",
         element : <About/>
@@ -75,7 +84,9 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
+    <ThemeProvider>
     <RouterProvider router={router} />
+   </ThemeProvider>
 );
 
 reportWebVitals();

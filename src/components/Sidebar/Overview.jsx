@@ -3,10 +3,17 @@ import Card from "../../Elementcomponent/Card";
 import { Heading2, Heading3 } from "../../Elementcomponent/Header";
 import Paragraph from "../../Elementcomponent/Paragraph";
 
-import overviewStyle from "../../Theme/Sidebar/overview";
+import overviewStylee from "../../Theme/Sidebar/overview";
+
+import { useContext } from "react";
+import { ThemeContext } from "../../Theme/theme";
 
 
 function Overview() {
+
+     const theme = useContext(ThemeContext);
+
+      const overviewStyle = overviewStylee(theme);
 
     return (
 

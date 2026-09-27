@@ -1,15 +1,16 @@
-const sliderStyle = {
+
+
+const sliderStylee = (theme) => ({
 
     slider: {
-        width: "470px",
+        width: "500px",
         marginTop: "45px",
         minHeight: "255px",
-        backgroundColor: "#f9f9fc",
-        border: "1px solid #b9becb",
-        borderRadius: "25px",
+        backgroundColor: theme.colors.surface,
+        borderRadius: theme.borderRadius.contentCard,
         padding: "25px",
         boxSizing: "border-box",
-        boxShadow: "0 3px 7px rgba(0, 0, 0, 0.15)",
+        boxShadow: theme.shadows.card,
         flexShrink: 0,
     },
 
@@ -19,7 +20,7 @@ const sliderStyle = {
         justifyContent: "space-between",
         minHeight: "190px",
         margin: "15% 0px",
-        gap: "10px",
+        gap: theme.gap.medium,
     },
 
     preview: {
@@ -28,12 +29,12 @@ const sliderStyle = {
     },
 
     sliderTitle: {
-        fontSize: "18px",
+        fontSize: theme.fontSize.large,
         margin: "0 0 15px",
     },
 
     sliderPara: {
-        fontSize: "13px",
+        fontSize: theme.fontSize.normal,
         lineHeight: 1.5,
         margin: 0,
     },
@@ -41,11 +42,11 @@ const sliderStyle = {
     back: {
         width: "40px",
         height: "40px",
-        borderRadius: "10px",
-        border: "2px solid #43d8da",
-        backgroundColor: "#43c9c9",
-        color: "white",
-        fontSize: "18px",
+        borderRadius: theme.borderRadius.medium,
+        border: `2px solid ${theme.colors.borderPrimary}`,
+        backgroundColor: theme.colors.secondary,
+        color: theme.colors.textLight,
+        fontSize: theme.fontSize.large,
         cursor: "pointer",
         flexShrink: 0,
     },
@@ -53,11 +54,11 @@ const sliderStyle = {
     next: {
         width: "40px",
         height: "40px",
-        borderRadius: "10px",
-        border: "2px solid #43d8da",
-        backgroundColor: "#43c9c9",
-        color: "white",
-        fontSize: "18px",
+        borderRadius: theme.borderRadius.medium,
+        border: `2px solid ${theme.colors.borderPrimary}`,
+        backgroundColor: theme.colors.secondary,
+        color: theme.colors.textLight,
+        fontSize: theme.fontSize.large,
         cursor: "pointer",
         flexShrink: 0,
     },
@@ -66,22 +67,22 @@ const sliderStyle = {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        gap: "7px",
+        gap: theme.gap.medium,
     },
 
     dot: {
         width: "20px",
         height: "13px",
         display: "block",
-        borderRadius: "40%",
-        backgroundColor: "#eeeeee",
+        borderRadius: theme.borderRadius.dotsRound,
+        backgroundColor: theme.colors.background,
         cursor: "pointer",
     },
 
     activeDot: {
-        backgroundColor: "#43c9c9",
+        backgroundColor: theme.colors.secondary,
     }
 
-};
+});
 
-export default sliderStyle;
+export default sliderStylee;

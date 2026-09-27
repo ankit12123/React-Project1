@@ -1,12 +1,18 @@
 import {Heading1} from "../../Elementcomponent/Header";
 import Button from "../../Elementcomponent/Button";
-import navbarStyle from "../../Theme/LandingPage/Navbar";
+import navbarStylee from "../../Theme/LandingPage/Navbar";
 import Div from "../../Elementcomponent/Div";
 import { useNavigate } from "react-router";
 
+import { useContext } from "react";
+import { ThemeContext } from "../../Theme/theme";
 
 function Navbar(){
     const navigate = useNavigate();
+
+    const theme = useContext(ThemeContext);
+
+    const navbarStyle = navbarStylee(theme);
 return(
     <>
     <Div style={navbarStyle.navbarContainer} id="navbarContainer">

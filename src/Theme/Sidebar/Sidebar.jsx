@@ -1,4 +1,6 @@
-const sidebarStyle = {
+
+
+const sidebarStylee = (theme) => ({
 
     sidebar: {
         position: "fixed",
@@ -6,8 +8,8 @@ const sidebarStyle = {
         left: 0,
         width: "240px",
         height: "100vh",
-        backgroundColor: "#ffffff",
-        borderRight: "2px solid #bdebed",
+        backgroundColor: theme.colors.surface,
+        borderRight: `2px solid ${theme.colors.divider}`,
         zIndex: 1000,
         overflowY: "auto",
         boxSizing: "border-box"
@@ -17,31 +19,31 @@ const sidebarStyle = {
         height: "95px",
         display: "flex",
         alignItems: "center",
-        gap: "10px",
+        gap: theme.gap.medium,
         padding: "15px",
-        borderBottom: "1px solid #bdebed",
+        borderBottom: `1px solid ${theme.colors.divider}`,
         boxSizing: "border-box"
     },
 
     userIcon: {
         width: "40px",
         height: "40px",
-        borderRadius: "12px",
-        backgroundColor: "#102d72",
-        color: "white",
-        fontWeight: "bolder",
+        borderRadius:theme.borderRadius.medium,
+        backgroundColor: theme.colors.primary,
+        color: theme.colors.textLight,
+        fontWeight: theme.fontWeight.extraBold,
         display: "flex",
         alignItems: "center",
         justifyContent: "center"
     },
 
     userDetails: {
-        fontSize: "14px"
+        fontSize: theme.fontSize.medium
     },
 
     userEmail: {
         margin: "5px 0 0",
-        fontSize: "12px"
+        fontSize: theme.fontSize.small
     },
 
     sidebarSection: {
@@ -49,8 +51,9 @@ const sidebarStyle = {
     },
 
     sidebarHeading: {
-        fontSize: "12px",
-        margin: "0 0 10px 0"
+        fontSize: theme.fontSize.medium,
+        margin: "0 0 10px 0",
+        fontWeight: theme.fontWeight.bold
     },
 
     sidebarButton: {
@@ -59,17 +62,18 @@ const sidebarStyle = {
         padding: "11px 12px",
         marginBottom: "5px",
         border: "none",
-        borderRadius: "10px",
+        borderRadius: theme.borderRadius.medium,
         backgroundColor: "transparent",
         textAlign: "left",
-        fontSize: "14px",
+        fontSize: theme.fontSize.medium,
         cursor: "pointer",
         boxSizing: "border-box"
     },
 
     activeButton: {
-        backgroundColor: "#f1f3f4",
-        border: "1px solid #55d8d8"
+        backgroundColor: theme.colors.background,
+        border: `1px solid ${theme.colors.borderPrimary}`,
+        borderLeft: `6px solid ${theme.colors.borderPrimary}`
     },
 
     accountSection: {
@@ -80,6 +84,6 @@ const sidebarStyle = {
         boxSizing: "border-box"
     }
 
-};
+});
 
-export default sidebarStyle;
+export default sidebarStylee;

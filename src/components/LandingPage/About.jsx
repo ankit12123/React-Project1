@@ -1,13 +1,19 @@
 import Card from "../../Elementcomponent/Card";
 import { Heading1 } from "../../Elementcomponent/Header";
 import Paragraph from "../../Elementcomponent/Paragraph";
-import aboutStyle from "../../Theme/LandingPage/About.jsx";
+import aboutStylee from "../../Theme/LandingPage/About.jsx";
 
 
 
-
+import { useContext } from "react";
+import { ThemeContext } from "../../Theme/theme";
 
 function About() {
+
+     const theme = useContext(ThemeContext);
+
+  const aboutStyle = aboutStylee(theme);
+
     return (
         <>
             <Card id="aboutContainer" style={aboutStyle.aboutContainer}>

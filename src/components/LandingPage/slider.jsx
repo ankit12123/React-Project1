@@ -4,9 +4,14 @@ import Card from "../../Elementcomponent/Card";
 import Paragraph from "../../Elementcomponent/Paragraph";
 import Div from "../../Elementcomponent/Div";
 
-import sliderStyle from "../../Theme/LandingPage/slider.jsx";
+import sliderStylee from "../../Theme/LandingPage/slider.jsx";
 
 import { useState , useEffect} from "react";
+
+import { useContext } from "react";
+import { ThemeContext } from "../../Theme/theme";
+
+
 
 const sliderData = [
     {
@@ -24,6 +29,11 @@ const sliderData = [
 ];
 
 function Slider(){
+
+
+     const theme = useContext(ThemeContext);
+
+    const sliderStyle = sliderStylee(theme);
 
     const [index, setIndex] = useState(0);
 

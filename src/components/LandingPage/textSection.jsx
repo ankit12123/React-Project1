@@ -3,12 +3,22 @@ import { Heading2 } from "../../Elementcomponent/Header";
 import Paragraph from "../../Elementcomponent/Paragraph";
 import Div from "../../Elementcomponent/Div";
 
-import textSectionStyle from "../../Theme/LandingPage/textSection";
+import textSectionStylee from "../../Theme/LandingPage/textSection";
 import Slider from "./slider";
 
 import { useNavigate } from "react-router";
 
+import { useContext } from "react";
+import { ThemeContext } from "../../Theme/theme";
+
+
 function TextSection(){
+
+    const theme = useContext(ThemeContext);
+
+    const textSectionStyle = textSectionStylee(theme);
+
+
     const navigate = useNavigate();
     return(
         <>

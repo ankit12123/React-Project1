@@ -1,103 +1,174 @@
 
-const loginStyle = {
+
+const loginStylee = (theme) => ({
+
     loginContainer: {
         height: "100vh",
+
         display: "flex",
+
         justifyContent: "center",
+
         alignItems: "center",
     },
+
 
     loginCard: {
         width: "420px",
-        boxShadow: "0 5px 15px rgba(0, 0, 0, 0.08)",
-        borderTop: "6px solid aqua",
-        borderRadius: "20px",
+
+        boxShadow: theme.shadows.card,
+
+        // borderTop: `6px solid ${theme.colors.secondary}`,
+        boxShadow: theme.shadows.card,
+
+
+        borderRadius: theme.borderRadius.extraLarge,
+
         display: "flex",
+
         flexDirection: "column",
-        backgroundColor: "#fff",
+
+        backgroundColor: theme.colors.cardBackground,
+
         padding: "20px",
     },
 
+
     loginHeader: {
         textAlign: "center",
+
         marginBottom: 0,
-        fontSize: "32px",
-        fontWeight: 500,
+
+        fontSize: theme.fontSize.mainHeading,
+
+        fontWeight: theme.fontWeight.medium,
     },
+
 
     loginPara: {
         textAlign: "center",
+
         marginTop: 0,
+
         marginBottom: "20px",
     },
 
+
     loginLabel: {
-        fontWeight: 500,
+        fontWeight: theme.fontWeight.medium,
+
         marginTop: "10px",
     },
 
+
     loginInput: {
-        height: "47px",
+        height: theme.heightInput.height,
+
         width: "100%",
+
         padding: "0 14px",
+
         boxSizing: "border-box",
-        border: "1px solid #61d6d6",
-        borderRadius: "14px",
-        backgroundColor: "white",
-        fontSize: "13px",
+
+        border: `1px solid ${theme.colors.borderPrimary}`,
+
+        borderRadius: theme.borderRadius.large,
+
+        backgroundColor:theme.colors.inputColor,
+
+        fontSize: theme.fontSize.normal,
+
         marginTop: "7px",
     },
 
+
     loginPasswordCondition: {
-        fontSize: "15px",
+        fontSize: theme.fontSize.medium,
+
         marginTop: "5px",
     },
 
+
     checkboxContainer: {
         display: "flex",
+
         alignItems: "center",
-        gap: "10px",
+
+        gap: theme.gap.medium,
     },
 
+
     remember: {
-        fontSize: "15px",
+        fontSize: theme.fontSize.medium,
     },
+
 
     forgotPassword: {
         marginLeft: "auto",
+
         textDecoration: "none",
-        color: "rgb(14, 184, 184)",
+
+        color: theme.colors.secondary,
     },
+
 
     signInBtn: {
         width: "100%",
-        height: "51px",
+
+        height: theme.heightBtn.large,
+
         border: "none",
-        borderRadius: "11px",
-        backgroundColor: "#55cece",
-        color: "white",
-        fontSize: "16px",
-        fontWeight: 700,
+
+        borderRadius: theme.borderRadius.medium,
+
+        backgroundColor: theme.colors.secondary,
+
+        color: theme.colors.textLight,
+
+        fontSize: theme.fontSize.semiLarge,
+
+        fontWeight: theme.fontWeight.bold,
+
         cursor: "pointer",
+
         marginBottom: "20px",
     },
 
+
     loginFooterBox: {
         display: "flex",
+
         alignItems: "center",
+
+        gap: theme.gap.small,
     },
+
+    loginFooterText: {
+        margin: 0,
+
+        fontSize: theme.fontSize.medium,
+    },
+
 
     loginFooterLink: {
-        fontSize: "14px",
-        color: "#26c5c5",
-        textDecoration: "none",
-        fontWeight: 600,
-    },
-    emailError:{
-         color: "red",
-          fontSize: "13px",
-           margin: "5px 0 0"
-    }
-};
+        fontSize: theme.fontSize.normal,
 
-export default loginStyle;
+        color: theme.colors.secondary,
+
+        textDecoration: "none",
+
+        fontWeight: theme.fontWeight.bold,
+    },
+
+
+    emailError: {
+        color: theme.colors.danger,
+
+        fontSize: theme.fontSize.normal,
+
+        margin: "5px 0 0",
+    },
+
+});
+
+export default loginStylee;
