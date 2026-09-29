@@ -17,7 +17,7 @@ function Services() {
 
     return (
         <>
-            <Card style={servicesStyle.servicesContainer} id="servicesContainer">
+            <Card style={servicesStyle.servicesContainer} id="servicesSection">
 
                 <Heading1 style={servicesStyle.servicesHeader} id="servicesHeader" text="What's Included" />
 

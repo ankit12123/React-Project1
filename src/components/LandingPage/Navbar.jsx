@@ -13,6 +13,20 @@ function Navbar(){
     const theme = useContext(ThemeContext);
 
     const navbarStyle = navbarStylee(theme);
+
+
+     function goToAbout() {
+        document.getElementById("aboutSection").scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+
+    function goToServices() {
+        document.getElementById("servicesSection").scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+
 return(
     <>
     <Div style={navbarStyle.navbarContainer} id="navbarContainer">
@@ -21,9 +35,9 @@ return(
         <Heading1 style={navbarStyle.navHeader}  id="navHeader" text="Webtech Practice"/>
         <Div  style={navbarStyle.navButtons} id="navbuttons">
                
-               <Button  style={navbarStyle.navBtn}  class="navBtn" name="About"  onClick={() => navigate("/about")}/>
-               <Button   style={navbarStyle.navBtn} class="navBtn" name="Services"/>
-               <Button  style={navbarStyle.navBtn}  class="navBtn" name="Theme"/>
+               <Button  style={navbarStyle.navBtn}  class="navBtn" name="About" onClick={goToAbout}/>
+               <Button   style={navbarStyle.navBtn} class="navBtn" name="Services" onClick={goToServices}/>
+               <Button  style={navbarStyle.navBtn}  class="navBtn" name="Theme" />
                <Button   style={navbarStyle.navBtn} class="navBtn" name="Login" onClick={() => navigate("/login")}/>
                <Button style={{
                                 ...navbarStyle.navBtn,
