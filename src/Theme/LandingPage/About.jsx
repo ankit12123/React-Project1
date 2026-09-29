@@ -6,6 +6,8 @@ const aboutStylee = (theme) => ({
     aboutContainer: {
         textAlign: "center",
         marginTop: "120px",
+
+        scrollMarginTop: "90px",
     },
 
     aboutPara: {

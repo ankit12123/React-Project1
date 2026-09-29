@@ -16,7 +16,7 @@ function About() {
 
     return (
         <>
-            <Card id="aboutContainer" style={aboutStyle.aboutContainer}>
+            <Card id="aboutSection" style={aboutStyle.aboutContainer}>
                 <Heading1 id="aboutTitle" text="About This Project" />
                 <Paragraph id="aboutPara" style={aboutStyle.aboutPara} text="This comprehensive template is designed for students and developers to practice modern web
          fundamentals⸺responsive layouts, accessible forms, client-side state management, and
