@@ -3,7 +3,7 @@
 const signupStylee = (theme) => ({
 
     signupContainer: {
-        height: "100vh",
+        minHeight: "100vh",
 
         display: "flex",
 
@@ -18,8 +18,6 @@ const signupStylee = (theme) => ({
 
         boxShadow: theme.shadows.card,
 
-
-
         borderRadius: theme.borderRadius.extraLarge,
 
         display: "flex",
@@ -29,6 +27,8 @@ const signupStylee = (theme) => ({
         backgroundColor: theme.colors.cardBackground,
 
         padding: "10px 25px 25px",
+
+        boxSizing: "border-box",
     },
 
 
@@ -88,7 +88,7 @@ const signupStylee = (theme) => ({
 
         borderRadius: theme.borderRadius.large,
 
-        backgroundColor:theme.colors.inputColor,
+        backgroundColor: theme.colors.inputColor,
 
         fontSize: theme.fontSize.normal,
 
@@ -100,7 +100,6 @@ const signupStylee = (theme) => ({
         fontSize: theme.fontSize.medium,
 
         fontWeight: theme.fontWeight.bold,
-
     },
 
 
@@ -117,12 +116,11 @@ const signupStylee = (theme) => ({
 
         boxSizing: "border-box",
 
-        backgroundColor:theme.colors.inputColor,
+        backgroundColor: theme.colors.inputColor,
 
-        fontSize: theme.borderRadius.large,
+        fontSize: theme.fontSize.normal,
 
         marginTop: "7px",
-
     },
 
 
@@ -159,7 +157,7 @@ const signupStylee = (theme) => ({
 
         borderRadius: theme.borderRadius.large,
 
-        backgroundColor:theme.colors.inputColor,
+        backgroundColor: theme.colors.inputColor,
 
         fontSize: theme.fontSize.normal,
 
@@ -184,8 +182,6 @@ const signupStylee = (theme) => ({
         alignItems: "center",
 
         gap: theme.gap.medium,
-
-        marginBottom: "25px",
     },
 
 
@@ -206,6 +202,8 @@ const signupStylee = (theme) => ({
 
 
     createAccountBtn: {
+        marginTop: "25px",
+
         width: "100%",
 
         height: theme.heightBtn.large,
@@ -269,6 +267,5 @@ const signupStylee = (theme) => ({
     },
 
 });
-
 
 export default signupStylee;
