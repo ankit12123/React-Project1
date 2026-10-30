@@ -118,6 +118,13 @@ const profileStylee = (theme) => ({
         fontWeight: theme.fontWeight.bold,
         cursor: "pointer",
     },
+    emailError: {
+        color: theme.colors.danger,
+
+        fontSize: theme.fontSize.normal,
+
+        margin: "5px 0 0",
+    },
 
 });
 

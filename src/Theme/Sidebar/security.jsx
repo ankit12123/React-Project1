@@ -243,6 +243,14 @@ const securityStylee = (theme) =>( {
 
         color: theme.colors.textSecondary,
     },
+    
+    emailError: {
+        color: theme.colors.danger,
+
+        fontSize: theme.fontSize.normal,
+
+        margin: "5px 0 0",
+    },
 
 });
 
