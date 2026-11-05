@@ -1,25 +1,15 @@
+
 import { useFormik } from "formik";
-import SignUpValidation from "../Validation/SignUpValidation";
 
-function useForm(onSubmit) {
+function useForm(initialValues, validationSchema, onSubmit) {
     const formik = useFormik({
-        initialValues: {
-            firstName: "",
-            lastName: "",
-            email: "",
-            password: "",
-            confirmPassword: "",
-            termsCheckbox: false,
-        },
-
-        validationSchema: SignUpValidation,
-
-        onSubmit: (values) => {
-            onSubmit(values);
-        },
+        initialValues,
+        validationSchema,
+        onSubmit,
     });
 
     return formik;
 }
 
 export default useForm;
+

@@ -1,5 +1,4 @@
 
-
 import Div from "../Elementcomponent/Div";
 import { Heading1 } from "../Elementcomponent/Header";
 import { Input, Label } from "../Elementcomponent/Input";
@@ -261,26 +260,26 @@ function SignUpForm({ formik, signupStyle, navigate }) {
 
                 </Div>
 
-                {formik.touched.termsCheckbox &&
-                    formik.errors.termsCheckbox && (
-                        <Paragraph
-                            text={formik.errors.termsCheckbox}
-                            style={signupStyle.error}
-                        />
-                    )}
+                                {formik.touched.termsCheckbox &&
+                        formik.errors.termsCheckbox && (
+                            <Paragraph
+                                text={formik.errors.termsCheckbox}
+                                style={signupStyle.error}
+                            />
+                        )}
 
 
                 {/* CREATE ACCOUNT */}
 
-                <Button
-                    style={signupStyle.createAccountBtn}
-                    id="CreateAccountBtn"
-                    name="Create Account"
-                    type="submit"
-                    disabled={
-                        !formik.values.termsCheckbox
-                    }
-                />
+                
+                    <Button
+                        style={signupStyle.createAccountBtn}
+                        id="CreateAccountBtn"
+                        name="Create Account"
+                        type="submit"
+                        disabled={formik.isSubmitting}
+                    />
+
 
 
                 {/* FOOTER */}

@@ -2,10 +2,11 @@
 
 const mainSidebarStylee = (theme) => ({
 
-    dashboard: {
-        minHeight: "100vh",
-        display: "flex",
-    },
+   dashboard: {
+    height: "100vh",
+    display: "flex",
+    overflow: "hidden",
+},
 
     contentCard: {
         maxWidth: "830px",
@@ -18,16 +19,25 @@ const mainSidebarStylee = (theme) => ({
         boxShadow: theme.shadows.contentCard,
     },
 
-    dashboardContent: {
-        padding: "110px 20px 50px",
-        minHeight: "100vh",
-    },
-
     dashboardMain: {
         marginLeft: "240px",
         width: "calc(100% - 240px)",
-        minHeight: "100vh",
+        height: "100vh",
+        minHeight: 0,
+        overflowY: "auto",
+        overflowX: "hidden",
+        boxSizing: "border-box",
     },
+
+dashboardContent: {
+    padding: "110px 20px 50px",
+    minHeight: "100%",
+    height: "auto",
+    boxSizing: "border-box",
+},
+
+
+
 
     // TABLET
     "@media (max-width: 1000px)": {

@@ -11,6 +11,7 @@ const helpSupportStylee = (theme) => ({
         borderTop: `6px solid ${theme.colors.border}`,
         borderRadius: theme.borderRadius.contentCard,
         boxShadow: theme.shadows.contentCard,
+        
     },
 
     helpHeading: {

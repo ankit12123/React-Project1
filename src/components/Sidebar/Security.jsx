@@ -12,11 +12,31 @@ import { useContext } from "react";
 import { ThemeContext } from "../../Theme/theme";
 
 
+import { useFormik } from "formik";
+import SecurityValidation from "../../Validation/SecurityVallidation";
+
+
 function Security() {
 
      const theme = useContext(ThemeContext);
 
   const securityStyle = securityStylee(theme);
+
+  const formik = useFormik({
+    initialValues:{
+        currentPassword : "",
+        password : "",
+        confirmPassword:""
+    },
+    validationSchema: SecurityValidation,
+
+       onSubmit: (values) => {
+        console.log("Security Values:", values);
+        alert("Password updated successfully!");
+    },
+});
+
+  
 
     return (
 
@@ -24,6 +44,9 @@ function Security() {
             id="securityCard"
             style={securityStyle.securityCard}
         >
+            <form onSubmit={formik.handleSubmit}>
+        {/* Keep all your existing Security Settings content here */}
+    
 
             {/* Main Heading */}
 
@@ -72,10 +95,20 @@ function Security() {
 
                     <Input
                         id="currentPassword"
+                        name="currentPassword"
                         type="password"
                         placeholder="Enter current password"
                         style={securityStyle.passwordInput}
+                        value={formik.values.currentPassword}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
                     />
+                        {formik.touched.currentPassword &&  formik.errors.currentPassword && (
+                        <Paragraph
+                            text={formik.errors.currentPassword}
+                            style={securityStyle.emailError}
+                        />
+                    )}
 
                 </Div>
 
@@ -94,11 +127,20 @@ function Security() {
                     />
 
                     <Input
-                        id="newPassword"
-                        type="password"
-                        placeholder="Minimum 6 characters"
-                        style={securityStyle.passwordInput}
-                    />
+                       
+                            id="newPassword"
+                            name="password"
+                            type="password"
+                            placeholder="Minimum 8 characters"
+                            style={securityStyle.passwordInput}
+                            value={formik.values.password}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                        />
+                        {formik.touched.password &&  formik.errors.password && (
+                        <Paragraph text={formik.errors.password} style={securityStyle.emailError} />
+                    )}
+                   
 
                 </Div>
 
@@ -119,11 +161,18 @@ function Security() {
                 />
 
                 <Input
-                    id="confirmNewPassword"
-                    type="password"
-                    placeholder="Re-enter new password"
-                    style={securityStyle.passwordInput}
-                />
+                        id="confirmNewPassword"
+                        name="confirmPassword"
+                        type="password"
+                        placeholder="Re-enter new password"
+                        style={securityStyle.passwordInput}
+                        value={formik.values.confirmPassword}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                    />
+                    {formik.touched.confirmPassword &&formik.errors.confirmPassword && (
+                    <Paragraph text={formik.errors.confirmPassword} style={securityStyle.emailError} />
+            )}
 
             </Div>
 
@@ -136,18 +185,19 @@ function Security() {
             >
 
                 <Button
-                    id="clearButton"
-                    class="clearButton"
-                    name="Clear"
-                    style={securityStyle.clearButton}
-                />
+                id="clearButton"
+                name="Clear"
+                type="button"
+                style={securityStyle.clearButton}
+                onClick={() => formik.resetForm()}
+            />
 
-                <Button
-                    id="updatePasswordButton"
-                    class="updateButton"
-                    name="Update Password"
-                    style={securityStyle.updateButton}
-                />
+            <Button
+                id="updatePasswordButton"
+                name="Update Password"
+                type="submit"
+                style={securityStyle.updateButton}
+            />
 
             </Div>
 
@@ -263,85 +313,9 @@ function Security() {
                 </Card>
 
             </Div>
-
+            </form>
         </Card>
-        //  <Card
-        //     id="securityCard"
-        //     style={styles.securityCard}
-        // >
-
-        //     <Heading2
-        //         id="securityHeading"
-        //         text="Security Settings"
-        //         style={styles.securityHeading}
-        //     />
-
-        //     <Heading3
-        //         id="securitySectionHeading"
-        //         text="Security Settings"
-        //         style={styles.sectionHeading}
-        //     />
-
-        //     <Paragraph
-        //         id="securityDescription"
-        //         text="Keep your account secure by using a strong password and changing it regularly."
-        //         style={styles.securityDescription}
-        //     />
-
-        //     <Div
-        //         id="passwordRow"
-        //         style={styles.passwordRow}
-        //     >
-
-        //         <Div
-        //             id="currentPasswordField"
-        //             style={styles.passwordField}
-        //         >
-
-        //             <Label
-        //                 id="currentPasswordLabel"
-        //                 text="Current Password"
-        //             />
-
-        //             <Input
-        //                 id="currentPassword"
-        //                 type="password"
-        //                 placeholder="Enter current password"
-        //                 style={styles.passwordInput}
-        //             />
-
-        //         </Div>
-
-
-        //         <Div
-        //             id="newPasswordField"
-        //             style={styles.passwordField}
-        //         >
-
-        //             <Label
-        //                 id="newPasswordLabel"
-        //                 text="New Password"
-        //             />
-
-        //             <Input
-        //                 id="newPassword"
-        //                 type="password"
-        //                 placeholder="Minimum 6 characters"
-        //                 style={styles.passwordInput}
-        //             />
-
-        //         </Div>
-
-        //     </Div>
-
-
-        //     <Button
-        //         id="updatePasswordButton"
-        //         name="Update Password"
-        //         style={styles.updateButton}
-        //     />
-
-        // </Card>
+       
     );
 }
 
