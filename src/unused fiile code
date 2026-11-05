@@ -1,0 +1,1096 @@
+
+
+// const signupStylee = (theme) => ({
+
+//     signupContainer: {
+//         height: "100vh",
+
+//         display: "flex",
+
+//         justifyContent: "center",
+
+//         alignItems: "center",
+//     },
+
+
+//     signupCard: {
+//         width: "450px",
+
+//         boxShadow: theme.shadows.card,
+
+
+
+//         borderRadius: theme.borderRadius.extraLarge,
+
+//         display: "flex",
+
+//         flexDirection: "column",
+
+//         backgroundColor: theme.colors.cardBackground,
+
+//         padding: "10px 25px 25px",
+//     },
+
+
+//     signupHeader: {
+//         fontSize: theme.fontSize.mainHeading,
+
+//         fontWeight: theme.fontWeight.bold,
+
+//         marginBottom: 0,
+//     },
+
+
+//     signupPara: {
+//         fontSize: theme.fontSize.medium,
+
+//         marginTop: 0,
+
+//         marginBottom: "10px",
+//     },
+
+
+//     signupNameBox: {
+//         display: "flex",
+
+//         gap: theme.gap.semiLarge,
+
+//         marginBottom: "20px",
+//     },
+
+
+//     signupField: {
+//         flex: 1,
+
+//         display: "flex",
+
+//         flexDirection: "column",
+//     },
+
+
+//     name: {
+//         fontSize: theme.fontSize.medium,
+
+//         fontWeight: theme.fontWeight.bold,
+//     },
+
+
+//     rowName: {
+//         width: "100%",
+
+//         boxSizing: "border-box",
+
+//         height: theme.heightInput.height,
+
+//         padding: "0 14px",
+
+//         border: `1px solid ${theme.colors.borderPrimary}`,
+
+//         borderRadius: theme.borderRadius.large,
+
+//         backgroundColor:theme.colors.inputColor,
+
+//         fontSize: theme.fontSize.normal,
+
+//         marginTop: "7px",
+//     },
+
+
+//     signupemail: {
+//         fontSize: theme.fontSize.medium,
+
+//         fontWeight: theme.fontWeight.bold,
+
+//     },
+
+
+//     signupEmailInput: {
+//         height: theme.heightInput.height,
+
+//         width: "100%",
+
+//         padding: "0 14px",
+
+//         border: `1px solid ${theme.colors.borderPrimary}`,
+
+//         borderRadius: theme.borderRadius.medium,
+
+//         boxSizing: "border-box",
+
+//         backgroundColor:theme.colors.inputColor,
+
+//         fontSize: theme.borderRadius.large,
+
+//         marginTop: "7px",
+
+//     },
+
+
+//     signupPasswordBox: {
+//         display: "flex",
+
+//         flex: 1,
+
+//         gap: theme.gap.semiLarge,
+
+//         marginBottom: "18px",
+
+//         marginTop: "20px",
+//     },
+
+
+//     labelPassword: {
+//         fontSize: theme.fontSize.medium,
+
+//         fontWeight: theme.fontWeight.bold,
+//     },
+
+
+//     rowPassword: {
+//         height: theme.heightInput.height,
+
+//         width: "100%",
+
+//         padding: "0 14px",
+
+//         boxSizing: "border-box",
+
+//         border: `1px solid ${theme.colors.borderPrimary}`,
+
+//         borderRadius: theme.borderRadius.large,
+
+//         backgroundColor:theme.colors.inputColor,
+
+//         fontSize: theme.fontSize.normal,
+
+//         marginTop: "7px",
+//     },
+
+
+//     signupPasswordPara: {
+//         width: "210px",
+
+//         fontSize: theme.fontSize.medium,
+
+//         lineHeight: "18px",
+
+//         margin: "0 0 15px 0",
+//     },
+
+
+//     signupCheckboxContainer: {
+//         display: "flex",
+
+//         alignItems: "center",
+
+//         gap: theme.gap.medium,
+
+       
+//     },
+
+
+//     checkbox: {
+//         width: "14px",
+
+//         height: "14px",
+
+//         margin: 0,
+//     },
+
+
+//     terms: {
+//         margin: 0,
+
+//         fontSize: theme.fontSize.medium,
+//     },
+
+
+//     createAccountBtn: {
+
+//          marginTop: "25px",
+
+//         width: "100%",
+
+//         height: theme.heightBtn.large,
+
+//         border: "none",
+
+//         borderRadius: theme.borderRadius.medium,
+
+//         backgroundColor: theme.colors.secondary,
+
+//         color: theme.colors.textLight,
+
+//         fontSize: theme.fontSize.semiLarge,
+
+//         fontWeight: theme.fontWeight.bold,
+
+//         cursor: "pointer",
+
+//         marginBottom: "20px",
+//     },
+
+
+//     createAccountBtnHover: {
+//         backgroundColor: theme.colors.success,
+//     },
+
+
+//     signupFooterBox: {
+//         display: "flex",
+
+//         alignItems: "center",
+
+//         gap: theme.gap.small,
+//     },
+
+
+//     signupFooterText: {
+//         margin: 0,
+
+//         fontSize: theme.fontSize.medium,
+//     },
+
+
+//     signupFooterLink: {
+//         fontSize: theme.fontSize.normal,
+
+//         color: theme.colors.secondary,
+
+//         textDecoration: "none",
+
+//         fontWeight: theme.fontWeight.bold,
+//     },
+
+
+//     error: {
+//         color: theme.colors.danger,
+
+//         fontSize: theme.fontSize.normal,
+
+//         margin: "5px 0 0",
+//     },
+
+// });
+
+
+// export default signupStylee;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { Formik, Form, Field, ErrorMessage } from "formik";
+// import { useNavigate } from "react-router";
+
+// import SignUpValidation from "../Validation/SignUpValidation";
+
+
+// function SignUp() {
+
+//     const navigate = useNavigate();
+
+
+//     return (
+
+//         <Formik
+
+//             initialValues={{
+//                 firstName: "",
+//                 lastName: "",
+//                 email: "",
+//                 password: "",
+//                 confirmPassword: "",
+//                 terms: false
+//             }}
+
+//             validationSchema={SignUpValidation}
+
+//             onSubmit={(values) => {
+
+//                 console.log(values);
+
+//                 alert("Account created successfully!");
+
+//                 navigate("/login");
+
+//             }}
+
+//         >
+
+//             <Form>
+
+//                 <div>
+
+//                     <h1>
+//                         Create your account
+//                     </h1>
+
+//                     <p>
+//                         Sign up to access the practice dashboard.
+//                     </p>
+
+
+//                     {/* FIRST NAME */}
+
+//                     <div>
+
+//                         <label htmlFor="firstName">
+//                             First Name:
+//                         </label>
+
+//                         <Field
+//                             type="text"
+//                             id="firstName"
+//                             name="firstName"
+//                             placeholder="Enter First Name"
+//                         />
+
+//                         <ErrorMessage
+//                             name="firstName"
+//                             component="p"
+//                         />
+
+//                     </div>
+
+
+//                     {/* LAST NAME */}
+
+//                     <div>
+
+//                         <label htmlFor="lastName">
+//                             Last Name:
+//                         </label>
+
+//                         <Field
+//                             type="text"
+//                             id="lastName"
+//                             name="lastName"
+//                             placeholder="Enter Last Name"
+//                         />
+
+//                         <ErrorMessage
+//                             name="lastName"
+//                             component="p"
+//                         />
+
+//                     </div>
+
+
+//                     {/* EMAIL */}
+
+//                     <div>
+
+//                         <label htmlFor="email">
+//                             Email Address:
+//                         </label>
+
+//                         <Field
+//                             type="email"
+//                             id="email"
+//                             name="email"
+//                             placeholder="Enter your email address"
+//                         />
+
+//                         <ErrorMessage
+//                             name="email"
+//                             component="p"
+//                         />
+
+//                     </div>
+
+
+//                     {/* PASSWORD */}
+
+//                     <div>
+
+//                         <label htmlFor="password">
+//                             Password:
+//                         </label>
+
+//                         <Field
+//                             type="password"
+//                             id="password"
+//                             name="password"
+//                             placeholder="Enter Password"
+//                         />
+
+//                         <ErrorMessage
+//                             name="password"
+//                             component="p"
+//                         />
+
+//                     </div>
+
+
+//                     {/* CONFIRM PASSWORD */}
+
+//                     <div>
+
+//                         <label htmlFor="confirmPassword">
+//                             Confirm Password:
+//                         </label>
+
+//                         <Field
+//                             type="password"
+//                             id="confirmPassword"
+//                             name="confirmPassword"
+//                             placeholder="Confirm Password"
+//                         />
+
+//                         <ErrorMessage
+//                             name="confirmPassword"
+//                             component="p"
+//                         />
+
+//                     </div>
+
+
+//                     {/* TERMS */}
+
+//                     <div>
+
+//                         <Field
+//                             type="checkbox"
+//                             id="terms"
+//                             name="terms"
+//                         />
+
+//                         <label htmlFor="terms">
+//                             I agree to the Terms
+//                         </label>
+
+//                         <ErrorMessage
+//                             name="terms"
+//                             component="p"
+//                         />
+
+//                     </div>
+
+
+//                     {/* SUBMIT BUTTON */}
+
+//                     <button
+//                         type="submit"
+//                     >
+//                         Create Account
+//                     </button>
+
+
+//                     {/* LOGIN LINK */}
+
+//                     <div>
+
+//                         <p>
+//                             Already have account?
+//                         </p>
+
+//                         <button
+//                             type="button"
+//                             onClick={() => navigate("/login")}
+//                         >
+//                             Sign in
+//                         </button>
+
+//                     </div>
+
+//                 </div>
+
+//             </Form>
+
+//         </Formik>
+
+//     );
+
+// }
+
+// export default SignUp;
+
+// import { useFormik } from "formik";
+// import SignUpValidation from "../Validation/SignUpValidation";
+
+// function SignUpForm({ onSubmit }) {
+
+//     const formik = useFormik({
+
+//         initialValues: {
+//             firstName: "",
+//             lastName: "",
+//             email: "",
+//             password: "",
+//             confirmPassword: "",
+//             termsCheckbox: false
+//         },
+
+//         validationSchema: SignUpValidation,
+
+//         onSubmit: (values) => {
+//             onSubmit(values);
+//         }
+
+//     });
+
+//     return formik;
+// }
+
+// export default SignUpForm;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import Card from "../../Elementcomponent/Card";
+// import Div from "../../Elementcomponent/Div";
+// import { Heading1 } from "../../Elementcomponent/Header";
+// import { Input, Label } from "../../Elementcomponent/Input";
+// import Paragraph from "../../Elementcomponent/Paragraph";
+
+// import Button from "../../Elementcomponent/Button";
+// import Link from "../../Elementcomponent/Link";
+
+// import signupStylee from "../../Theme/SignUpPage/SignUp";
+
+// import { useNavigate } from "react-router";
+// import { useState } from "react";
+
+// import { useContext } from "react";
+// import { ThemeContext } from "../../Theme/theme";
+
+
+
+
+
+
+// function SignUp() {
+
+    
+//      const theme = useContext(ThemeContext);
+
+//   const signupStyle = signupStylee(theme);
+
+//     const navigate = useNavigate();
+
+//     const [firstName, setFirstName] = useState("");
+//     const [lastName, setLastName] = useState("");
+//     const [email, setEmail] = useState("");
+//     const [password, setPassword] = useState("");
+//     const [confirmPassword, setConfirmPassword] = useState("");
+
+//     const [firstNameError, setFirstNameError] = useState("");
+//     const [lastNameError, setLastNameError] = useState("");
+//     const [emailError, setEmailError] = useState("");
+//     const [passwordError, setPasswordError] = useState("");
+//     const [confirmPasswordError, setConfirmPasswordError] = useState("");
+
+//     const [terms, setTerms] = useState(false);
+
+//     function handleSignUp() {
+
+//         setFirstNameError("");
+//         setLastNameError("");
+//         setEmailError("");
+//         setPasswordError("");
+//         setConfirmPasswordError("");
+
+//         let isValid = true;
+
+//         // First Name Validation
+
+//         if (firstName.trim() === "") {
+
+//             setFirstNameError("First name is required.");
+
+//             isValid = false;
+//         } else if (firstName.trim().length < 2) {
+
+//             setFirstNameError("First name must be at least 2 characters.");
+
+//             isValid = false;
+//         }
+
+
+//         // Last Name Validation
+
+//         if (lastName.trim() === "") {
+
+//             setLastNameError("Last name is required.");
+
+//             isValid = false;
+//         } else if (lastName.trim().length < 2) {
+
+//             setLastNameError("Last name must be at least 2 characters.");
+
+//             isValid = false;
+//         }
+
+
+//         // Email Validation
+
+//         if (email.trim() === "") {
+
+//             setEmailError("Email is required.");
+
+//             isValid = false;
+
+//         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+
+//             setEmailError("Enter a valid email address.");
+
+//             isValid = false;
+//         }
+
+
+//         // Password Validation
+
+//         if (password.trim() === "") {
+
+//             setPasswordError("Password is required.");
+
+//             isValid = false;
+
+//         } else if (
+//             !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#]).{6,}$/.test(password)
+//         ) {
+
+//             setPasswordError(
+//                 "Password must be at least 8 characters with uppercase, lowercase, number & special character."
+//             );
+
+//             isValid = false;
+//         }
+
+
+//         // Confirm Password Validation
+
+//         if (confirmPassword.trim() === "") {
+
+//             setConfirmPasswordError("Confirm password is required.");
+
+//             isValid = false;
+
+//         } else if (confirmPassword !== password) {
+
+//             setConfirmPasswordError("Passwords do not match.");
+
+//             isValid = false;
+//         }
+
+//         // Terms Validation
+
+//         if (!terms) {
+
+//             alert("Please agree to the Terms.");
+
+//             isValid = false;
+//         }
+
+
+//         // Stop if validation fails
+
+//         if (!isValid) {
+
+//             return;
+//         }
+
+
+//         // Successful Signup
+
+//         alert("Account created successfully!");
+
+//         navigate("/login");
+//     }
+//     return (
+
+//         <>
+//             <Card style={signupStyle.signupContainer} id="signupContainer">
+//                 <Div style={signupStyle.signupCard} id="signupCard">
+//                     <Heading1 style={signupStyle.signupHeader} id="signupHeader" text="Create your account" />
+//                     <Paragraph style={signupStyle.signupPara} id="signupPara" text="Sign up to access the practice dashboard." />
+
+//                     <Div style={signupStyle.signupNameBox} id="signupNameBox">
+//                         <Div style={signupStyle.signupField} class="signupField">
+//                             <Label style={signupStyle.name} text="First name:" id="Fname" class="name" />
+//                             <Input style={signupStyle.rowName} type="text" id="FnameInput" class="rowName" placeholder="Enter First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+//                             {firstNameError && (<Paragraph text={firstNameError} style={signupStyle.error} />)}
+//                         </Div>
+
+//                         <Div style={signupStyle.signupField} class="signupField">
+//                             <Label style={signupStyle.name} text="Last name:" id="Lname" class="name" />
+//                             <Input style={signupStyle.rowName} type="text" id="LnameInput" class="rowName" placeholder="Enter Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+//                             {lastNameError && (<Paragraph text={lastNameError} style={signupStyle.error} />)}
+//                         </Div>
+//                     </Div>
+
+//                     <Label style={signupStyle.signupemail} text="Email Address:" id="signupemail" />
+//                     <Input style={signupStyle.signupEmailInput} type="email" id="signupEmailInput" placeholder="Enter your email address" value={email} onChange={(e) => setEmail(e.target.value)} />
+//                     {emailError && (<Paragraph text={emailError} style={signupStyle.error} />)}
+
+//                     <Div style={signupStyle.signupPasswordBox} id="signupPasswordBox">
+//                         <Div style={signupStyle.signupField} class="signupField">
+//                             <Label style={signupStyle.labelPassword} text="Password:" id="password" class="labelPassword" />
+//                             <Input style={signupStyle.rowPassword} type="text" id="passwordInput" class="rowPassword" placeholder="Enter Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+//                             {passwordError && (<Paragraph text={passwordError} style={signupStyle.error} />)}
+//                         </Div>
+//                         <Div style={signupStyle.signupField} class="signupField">
+//                             <Label style={signupStyle.labelPassword} text="Confirm Password:" id="confirmPassword" class="labelPassword" />
+//                             <Input style={signupStyle.rowPassword} type="text" id="confirmPasswordInput" class="rowPassword" placeholder="Confirm Passowrd" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+//                             {confirmPasswordError && (<Paragraph text={confirmPasswordError} style={signupStyle.error} />)}
+//                         </Div>
+//                     </Div>
+
+//                     <Paragraph style={signupStyle.signupPasswordPara} id="signupPasswordPara" text="Use at least 8 characters, with letter & number" />
+
+//                     <Div style={signupStyle.signupCheckboxContainer} id="signupCheckboxContainer">
+//                         <Input style={signupStyle.checkbox} type="checkbox" id="checkbox" checked={terms} onChange={(e) => setTerms(e.target.checked)} />
+//                         <Paragraph style={signupStyle.terms} id="terms" text="I agree to the Terms" />
+//                     </Div>
+//                     <Button style={signupStyle.createAccountBtn} id="CreateAccountBtn" name="Create Account" onClick={handleSignUp} disabled={!terms} />
+
+//                     <Div style={signupStyle.signupFooterBox} id="signupFooterBox">
+//                         <Paragraph style={signupStyle.signupFooterText} id="signupFooterText" text="Already have account?" />
+//                         <Link href="" style={signupStyle.signupFooterLink} id="signupFooterLink" text=" Sign in" onClick={() => navigate("/login")} />
+//                     </Div>
+
+//                 </Div>
+
+//             </Card>
+//         </>
+//     );
+// }
+// export default SignUp;
+
+// import Card from "../../Elementcomponent/Card";
+// import Div from "../../Elementcomponent/Div";
+// import { Heading1 } from "../../Elementcomponent/Header";
+// import { Input, Label } from "../../Elementcomponent/Input";
+// import Paragraph from "../../Elementcomponent/Paragraph";
+
+// import Button from "../../Elementcomponent/Button";
+// import Link from "../../Elementcomponent/Link";
+
+// import signupStylee from "../../Theme/SignUpPage/SignUp";
+
+// import { useNavigate } from "react-router";
+// import { useState } from "react";
+
+// import { useContext } from "react";
+// import { ThemeContext } from "../../Theme/theme";
+// import { Formik,Form } from "formik";
+// import SignUpValidation from "../../Validation/SignUpValidation";
+
+
+
+
+
+
+// function SignUp() {
+
+    
+//      const theme = useContext(ThemeContext);
+
+//     const signupStyle = signupStylee(theme);
+
+//     const navigate = useNavigate();
+
+//     const [firstName, setFirstName] = useState("");
+//      const [lastName, setLastName] = useState("");
+//      const [email, setEmail] = useState("");
+//      const [password, setPassword] = useState("");
+//      const [confirmPassword, setConfirmPassword] = useState("");
+
+//      const [firstNameError, setFirstNameError] = useState("");
+//      const [lastNameError, setLastNameError] = useState("");
+//      const [emailError, setEmailError] = useState("");
+//      const [passwordError, setPasswordError] = useState("");
+//      const [confirmPasswordError, setConfirmPasswordError] = useState("");
+
+//      const [terms, setTerms] = useState(false);
+
+    
+//     return (
+//         <>
+//         <Formik
+//             initialValues={{
+//                 firstName: "",
+//                 lastName:"",
+//                 email:"",
+//                 password:"",
+//                 confirmPassword:"",
+//                 terms:false
+//             }}
+//             validationSchema={SignUpValidation}
+
+//             onSubmit={(values) => {
+//                 console.log(values);
+//                 alert("Account reated Succesfully");
+//                 navigate("/login");
+//             }}
+//         >
+
+        
+//             <Form style={signupStyle.signupContainer} id="signupContainer">
+//                 <Div style={signupStyle.signupCard} id="signupCard">
+//                     <Heading1 style={signupStyle.signupHeader} id="signupHeader" text="Create your account" />
+//                     <Paragraph style={signupStyle.signupPara} id="signupPara" text="Sign up to access the practice dashboard." />
+
+//                     <Div style={signupStyle.signupNameBox} id="signupNameBox">
+//                         <Div style={signupStyle.signupField} class="signupField">
+//                             <Label style={signupStyle.name} text="First name:" id="Fname" class="name" />
+//                             <Input style={signupStyle.rowName} type="text" id="FnameInput" class="rowName" placeholder="Enter First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+//                             {firstNameError && (<Paragraph text={firstNameError} style={signupStyle.error} />)}
+//                         </Div>
+
+//                         <Div style={signupStyle.signupField} class="signupField">
+//                             <Label style={signupStyle.name} text="Last name:" id="Lname" class="name" />
+//                             <Input style={signupStyle.rowName} type="text" id="LnameInput" class="rowName" placeholder="Enter Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+//                             {lastNameError && (<Paragraph text={lastNameError} style={signupStyle.error} />)}
+//                         </Div>
+//                     </Div>
+
+//                     <Label style={signupStyle.signupemail} text="Email Address:" id="signupemail" />
+//                     <Input style={signupStyle.signupEmailInput} type="email" id="signupEmailInput" placeholder="Enter your email address" value={email} onChange={(e) => setEmail(e.target.value)} />
+//                     {emailError && (<Paragraph text={emailError} style={signupStyle.error} />)}
+
+//                     <Div style={signupStyle.signupPasswordBox} id="signupPasswordBox">
+//                         <Div style={signupStyle.signupField} class="signupField">
+//                             <Label style={signupStyle.labelPassword} text="Password:" id="password" class="labelPassword" />
+//                             <Input style={signupStyle.rowPassword} type="text" id="passwordInput" class="rowPassword" placeholder="Enter Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+//                             {passwordError && (<Paragraph text={passwordError} style={signupStyle.error} />)}
+//                         </Div>
+//                         <Div style={signupStyle.signupField} class="signupField">
+//                             <Label style={signupStyle.labelPassword} text="Confirm Password:" id="confirmPassword" class="labelPassword" />
+//                             <Input style={signupStyle.rowPassword} type="text" id="confirmPasswordInput" class="rowPassword" placeholder="Confirm Passowrd" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+//                             {confirmPasswordError && (<Paragraph text={confirmPasswordError} style={signupStyle.error} />)}
+//                         </Div>
+//                     </Div>
+
+//                     <Paragraph style={signupStyle.signupPasswordPara} id="signupPasswordPara" text="Use at least 8 characters, with letter & number" />
+
+//                     <Div style={signupStyle.signupCheckboxContainer} id="signupCheckboxContainer">
+//                         <Input style={signupStyle.checkbox} type="checkbox" id="checkbox" checked={terms} onChange={(e) => setTerms(e.target.checked)} />
+//                         <Paragraph style={signupStyle.terms} id="terms" text="I agree to the Terms" />
+//                     </Div>
+//                     <Button style={signupStyle.createAccountBtn} id="CreateAccountBtn" name="Create Account" disabled={!terms} />
+
+//                     <Div style={signupStyle.signupFooterBox} id="signupFooterBox">
+//                         <Paragraph style={signupStyle.signupFooterText} id="signupFooterText" text="Already have account?" />
+//                         <Link href="" style={signupStyle.signupFooterLink} id="signupFooterLink" text=" Sign in" onClick={() => navigate("/login")} />
+//                     </Div>
+
+//                 </Div>
+
+//             </Form>
+//          </Formik>
+
+//      </>
+        
+//     );
+// }
+// export default SignUp;
+
+
+
+
+
+
+
+
+
+
+
+// import { useContext } from "react";
+// import { useNavigate } from "react-router";
+
+// import useForm from "../../hooks/UseForm";
+// import SignUpForm from "../../forms/SignUpForm";
+
+// import signupStylee from "../../Theme/SignUpPage/SignUp";
+// import { ThemeContext } from "../../Theme/theme";
+
+// function SignUp() {
+
+//     const theme = useContext(ThemeContext);
+
+//     const signupStyle = signupStylee(theme);
+
+//     const navigate = useNavigate();
+
+
+//     const handleSubmit = (values) => {
+
+//         console.log("Signup Values:", values);
+
+//         alert("Account created successfully!");
+
+//         navigate("/login");
+//     };
+
+
+//     const formik = useForm(handleSubmit);
+
+
+//     return (
+//         <SignUpForm
+//             formik={formik}
+//             signupStyle={signupStyle}
+//             navigate={navigate}
+//         />
+//     );
+// }
+
+// export default SignUp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import Button from "../../Elementcomponent/Button";
+// import Card from "../../Elementcomponent/Card";
+// import Div from "../../Elementcomponent/Div";
+// import { Heading2 } from "../../Elementcomponent/Header";
+// import { Input, Label } from "../../Elementcomponent/Input";
+// import Link from "../../Elementcomponent/Link";
+// import Paragraph from "../../Elementcomponent/Paragraph";
+
+// import loginStylee from "../../Theme/login/login.jsx";
+// import { useState } from "react";
+
+// import { useNavigate } from "react-router";
+
+// import { useContext } from "react";
+// import { ThemeContext } from "../../Theme/theme";
+
+// function LoginCard() {
+
+//      const theme = useContext(ThemeContext);
+
+//   const loginStyle = loginStylee(theme);
+
+//     const navigate = useNavigate();
+
+//     const [email, setEmail] = useState("");
+//     const [password, setPassword] = useState("");
+
+//     const [emailError, setEmailError] = useState("");
+//     const [passwordError, setPasswordError] = useState("");
+
+//     const [rememberMe, setRememberMe] = useState(false);
+
+//     function handleLogin() {
+
+//         setEmailError("");
+//         setPasswordError("");
+
+//         let isValid = true;
+
+//         if (email.trim() === "") {
+
+//             setEmailError("Email is required.");
+
+//             isValid = false;
+
+//         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+
+//             setEmailError("Enter a valid email address.");
+
+//             isValid = false;
+//         }
+
+//         if (password.trim() === "") {
+
+//             setPasswordError("Password is required.");
+
+//             isValid = false;
+//         }
+
+//         else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#]).{6,}$/.test(password)) {
+//             setPasswordError(
+//                 "Password must be at least 6 characters with uppercase, lowercase, number & special character."
+//             );
+//             isValid = false;
+//         }
+
+//         if (!isValid) {
+
+//             return;
+//         }
+
+//         alert("Login successful!");
+
+//         navigate("/dashboard");
+//     }
+//     return (
+//         <>
+//             <Card style={loginStyle.loginContainer} id="logincontainer">
+
+//                 <Div style={loginStyle.loginCard} id="loginCard">
+
+//                     <Heading2 style={loginStyle.loginHeader} id="loginHeader" text="Welcome Back" />
+//                     <Paragraph style={loginStyle.loginPara} id="loginPara" text="Sign in to continue to your dashboard" />
+
+
+//                     <Label style={loginStyle.loginLabel} text="Email Address:" id="loginEmail" class="loginLabel" />
+//                     <Input style={loginStyle.loginInput} type="email" id="loginEmail" class="loginInput" placeholder="Enter the Email address" value={email} onChange={(e) => setEmail(e.target.value)} />
+//                     {emailError && (<Paragraph text={emailError} style={loginStyle.emailError} />)}
+
+//                     <Label style={loginStyle.loginLabel} text="Password: " id="loginPassword" class="loginLabel" />
+//                     <Input style={loginStyle.loginInput} type="password" id="loginPassword" class="loginInput" placeholder="Enter the password" value={password} onChange={(e) => setPassword(e.target.value)} />
+//                     {passwordError && (<Paragraph text={passwordError} style={loginStyle.emailError} />)}
+
+//                     <Paragraph style={loginStyle.loginPasswordCondition} id="loginPasswordCondition" text="Password must be at least 6 characters long." />
+
+//                     <Div style={loginStyle.checkboxContainer} id="checkboxContainer">
+//                         <Input type="checkbox" id="checkbox" checked={rememberMe} onChange={(e) => setRememberMe(e.target.checked)}/>
+//                         <Paragraph style={loginStyle.remember} id="remember" text="Remember me for 30 days" />
+//                         <Link href="" style={loginStyle.forgotPassword} id="Forgotpassword" text="Forgot password?" />
+
+//                     </Div>
+//                     <Button style={loginStyle.signInBtn} id="SignInBtn" name="Sign In" disabled={!rememberMe}  onClick={handleLogin}  />
+
+//                     <Div style={loginStyle.loginFooterBox} id="loginFooterBox">
+//                         <Paragraph id="loginFooterText" style={loginStyle.loginFooterText} text="New to WebTech Practice?" />
+//                         <Link style={loginStyle.loginFooterLink} href="" id="loginFooterLink" text=" Create an account" onClick={() => navigate("/SignUp")} />
+//                     </Div>
+//                 </Div>
+//             </Card>
+//         </>
+//     );
+// }
+
+// export default LoginCard;
